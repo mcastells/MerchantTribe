@@ -217,9 +217,9 @@ h4 {font-weight:bold;font-size:14px;line-height:1.286em;margin:0 9px;padding:7px
 
 
 /* Columns */
-#homepagecolumn1, #navcolumn, #categoryleft {width:220px;float:left;}
-#homepagecolumn2 {width:480px; margin: 0; float:left;}
-#homepagecolumn3 {width: 220px;float:right;}
+#homepagecolumn1, #navcolumn, #categoryleft {width:940px;float:left;}
+#homepagecolumn2 {width:480px; margin: 0; float:left;display:none;}
+#homepagecolumn3 {width: 220px;float:right;display:none;}
 #maincolumn, #categorymain {width:700px;float:right;margin-left: 10px;}
 
 /* Column Blocks */
