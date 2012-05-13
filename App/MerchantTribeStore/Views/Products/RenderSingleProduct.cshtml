@@ -16,17 +16,21 @@ else
 }
   <div class="recordimage">
   <a href="@Model.ProductLink">
-  <img src="@Model.ImageUrl" border="0" alt="@Model.Item.ImageFileSmallAlternateText" /></a>
+  <img class="productThumbnail" src="@Model.ImageUrl" border="0" alt="@Model.Item.ImageFileSmallAlternateText" /></a>
   </div>
   
-  <div class="recordname">
-  <a href="@Model.ProductLink">@Model.Item.ProductName</a>
+  <div class="productInfo" style="display: none;">
+      <div class="recordname">
+      <a href="@Model.ProductLink">@Model.Item.ProductName</a>
+      </div>
+      <div class="productArtist">
+      <a href="@Model.ProductLink">by @Model.Item.CustomProperties["Artist"]</a></div>
   </div>
-  <div class="recordsku">
+  @*<div class="recordsku">
   <a href="@Model.ProductLink">@Model.Item.Sku</a>
   </div>
   <div class="recordprice">
   <a href="@Model.ProductLink">@Html.Raw(Model.UserPrice.DisplayPrice(true))</a>
-  </div>
+  </div>*@
 </div>
 
