@@ -1,8 +1,7 @@
 ﻿@model MerchantTribeStore.Models.CategoryPageViewModel
-@Html.Action("CategoryTrail", "BreadCrumb", new { cat = Model.LocalCategory })
-<div id="categoryleft">
-    @Html.Action("Index", "ContentColumn", new {id="4"})
-</div>
+
+@*@Html.Action("CategoryTrail", "BreadCrumb", new { cat = Model.LocalCategory })*@
+
 <div id="categorymain">
     @if (Model.LocalCategory.ShowTitle)
     {
