@@ -277,7 +277,7 @@ h4 {font-size:14px;font-weight:bold;line-height:1.5em;}
 .record a {text-decoration:none;}
 .record a:hover {text-decoration:underline;}
 .recordimage {text-align: center;}
-.recordname {/*text-align:center;*/line-height:1.5em;font-size: 100%; font-weight: bold; }
+.recordname {/*text-align:center;line-height:1.5em;font-size: 100%; font-weight: bold;*/ }
 .recordsku {text-align:center;margin: 0px 0;}
 .recordsku a { font-size: 85%; color: #999; text-decoration: none; text-transform: uppercase; }
 .recordprice { font-size: 110%; font-weight: normal;text-align:center;border:none;margin:0;padding:0;line-height:1em;}
@@ -938,9 +938,12 @@ td.producttotalcolumn, td.productpricecolumn
 }
 .recordname, .productArtist
 {
+	text-transform: uppercase;
 	color: #000;
 	float: left;
 	width: 200px;
+	font-family: "din-condensed-web",sans-serif;
+	font-size: 22px;
 }
 .productImageLink
 {
