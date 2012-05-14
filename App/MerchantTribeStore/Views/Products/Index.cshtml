@@ -1,4 +1,7 @@
 ﻿@model MerchantTribeStore.Models.ProductPageViewModel
+
+@Html.Action("Index", "ContentColumn", new { id = "Promo Banner" })
+
 <div id="productpage">
     @Html.Action("ProductTrail", "BreadCrumb", new { product = Model.LocalProduct })
     @Html.Action("Index", "ContentColumn", new { id = Model.LocalProduct.PreContentColumnId })
@@ -164,7 +167,7 @@
             </div>
             <div id="tabsuggesteditems">
                 <div class="padded">
-                    <h2>@ViewBag.RelatedItemsTitle</h2>
+                    @*<h2>@ViewBag.RelatedItemsTitle</h2>*@
                     <div class="relateditems">
                         @foreach (var item in Model.RelatedItems)
                         {
