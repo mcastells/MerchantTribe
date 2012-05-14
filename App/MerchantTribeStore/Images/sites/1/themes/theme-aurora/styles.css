@@ -19,45 +19,40 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 
 /* Body Styles */
-body { background: #000; font-family: Arial, Verdana, Sans-Serif; color: #000; font-size: 13px;line-height:1.385em;}
+body { background: #0f0d16 url(https://s3.amazonaws.com/illtee-web/bg.jpg) center top no-repeat; font-family: Arial, Verdana, Sans-Serif; color: #fff; font-size: 16px; line-height:1.5em;}
 
 .clear {clear:both;}
 .padded {padding:10px;}
 .sidepadded {padding:0 10px;}
 .centered, table.centerall td {text-align:center;}
-
-a, a:visited, a:hover {color:#00e;}
 strike {text-decoration:line-through;}
 
+/* links */
+a, a:visited, a:hover {color:#fff; font-weight: bold; text-decoration: none; }
+
 /* Wraps the entire site */
-#site-wrapper {width:960px; margin:0 auto;padding:0;background:#fff;}
+#site-wrapper {width:900px; margin:0 auto;padding:0;}
 
 /* Header */
-#header {height:144px;background-color:#fff;}
-#header #logo-area {height:110px;width:310px;float:left;overflow:hidden;}
+#header {height:144px;width:900px}
+#header #logo-area {margin-top: 44px;position: absolute;}
 #header #logo-area a img {margin:0;}
 #header #logo-area a.logo {font-size:36px;color:#000;text-decoration:none;
                            line-height:1em;padding:18px 0 0 18px;display:block;font-weight:bold;}
 #header ul {list-style:none;}                           
 #header li {float:left;list-style:none;}
 
-#links-area {width:640px;height:27px;margin:9px 10px 0 0;float:right;
-             font-size:14px; line-height:1.286em;}
+#links-area {position: absolute; margin: 54px 0 0 585px; }
 #links-area ul {float:right;}
 #links-area li {float:left;}                            
-#links-area a {color:#666;text-decoration:none;font-size:12px;}  
-#links-area a:hover {color:#00e;text-decoration:underline;}                    
-#links-area a span {display:block;height:18px;padding:0 0 0 18px;}
 
-#header-menu {background-color:#353535;overflow:hidden; color:#fff;clear:both;height:34px;}
+#header-menu {margin: 54px 0 0 320px;position: absolute;}
 #header-menu ul {}
-#header-menu li {margin: 0 0 0 2px; font-size: 13px; line-height: 30px; }
-#header-menu a { float: left; padding: 0 10px; color:#fff; text-decoration: none;}
-#header-menu a:hover { color:#fff; text-decoration: underline;}
+#header-menu li {margin-right: 10px; padding-right: 10px; border-right: 1px solid #314b4c;}
 
-#cart-link {width:640px;height:27px;margin:9px 10px 0 0;text-align:right;float:right;}
-#cart-link a {text-decoration:none;font-weight:bold;color:#666;}
-#cart-link a:hover {text-decoration:underline;color:#00e;}
+#cart-link {margin-top: 54px; float: right;}
+#cart-link a {}
+#cart-link a:hover {}
 
 #search-form {width:240px;margin:0;padding:0px 10px 0 0;height:38px;
 	      float:right; text-align:right; background-color:#353535; overflow:hidden;}
@@ -65,12 +60,21 @@ strike {text-decoration:line-through;}
 #search-form .searchinput {height:20px;margin:0;padding:0;position:relative;left:0;top:-9px;}
 #search-form .searchgo {margin:3px 0 0 0;}
 
+#links-area a, #header-menu a { color: #fff; font-size: 16px; }
 
 /* Main Content Wrapper */
 #main-content {width:940px;margin:0 auto;}
 #main-with-left-nav {width:752px;float:right;margin:0;}
+
 /* Footer */
-#footer {clear:both;padding:9px;text-align:center;color:#fff;}
+#footer 
+{
+	background: #000; 
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+	filter: alpha(opacity=40);
+	opacity: .4;
+	clear:both;padding:9px;text-align:center;;
+}
 #footer a {color:#fff;text-decoration:none;}
 #footer a:hover {color:#fff;text-decoration:underline;}
 
@@ -527,22 +531,13 @@ ul.filterselected li, ul.filterselections li {margin:0.25em 1em;list-style:none;
 
  */
 
-
-/* Body */
-body { background: #7791C9;}
-
-
 /* Main Color Items */
-#header #logo-area a.logo {color:#0C275F;}
-#links-area a {color:#0C275F;}  
-#header-menu {background-color:#0C275F;}
-#cart-link a {color:#0C275F;}
-#search-form {background-color:#0C275F;}
-#footer {background-color:#0C275F;}
-h1 {color:#0C275F;}
+#header #logo-area a.logo {color:#fff;}
+#links-area a {color:#fff;}  
+#cart-link a {color:#fff;}
+#search-form {display: none;}
+h1 {color:#fff;}
 .Header, .rowheader, th { background: #0C275F;}
-
-
 
 #headersearchlink {text-decoration:none;color:#fff;}
 
@@ -557,7 +552,7 @@ h1 {color:#0C275F;}
 
 
 /* Column Blocks */
-.decoratedblock {background: #dfe9ff;}
+.decoratedblock {}
 
 
 /* Product Controls Box */
