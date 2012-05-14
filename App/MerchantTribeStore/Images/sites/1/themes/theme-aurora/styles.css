@@ -947,6 +947,7 @@ td.producttotalcolumn, td.productpricecolumn
 	width: 200px;
 	font-family: "din-condensed-web",sans-serif;
 	font-size: 22px;
+	font-weight: normal;
 }
 .productImageLink
 {
