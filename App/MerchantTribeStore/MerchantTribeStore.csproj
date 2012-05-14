@@ -878,10 +878,16 @@
     <Content Include="Images\sites\1\themes\theme-aurora\bvtheme.xml" />
     <Content Include="Images\sites\1\themes\theme-aurora\ColumnData.xml" />
     <Content Include="Images\sites\1\themes\theme-aurora\footer.htm" />
-    <Content Include="Images\sites\1\themes\theme-aurora\header.htm" />
+    <Content Include="Images\sites\1\themes\theme-aurora\templates\default-no-menu.html" />
+    <Content Include="Images\sites\1\themes\theme-aurora\templates\default.html" />
+    <Content Include="Images\sites\1\themes\theme-aurora\templates\parts\footer.html" />
+    <Content Include="Images\sites\1\themes\theme-aurora\templates\parts\full-footer.html" />
+    <Content Include="Images\sites\1\themes\theme-aurora\templates\parts\full-header.html" />
     <Content Include="Images\sites\1\themes\theme-aurora\preview.png" />
     <Content Include="Images\sites\1\themes\theme-aurora\preview_big.png" />
     <Content Include="Images\sites\1\themes\theme-aurora\styles.css" />
+    <Content Include="Images\sites\1\themes\theme-aurora\templates\parts\header.html" />
+    <Content Include="Images\sites\1\themes\theme-aurora\templates\home.html" />
     <Content Include="Images\sites\1\themes\theme-bv-simpleblue\buttons\addtocart.png" />
     <Content Include="Images\sites\1\themes\theme-bv-simpleblue\buttons\CreateAccount.png" />
     <Content Include="Images\sites\1\themes\theme-bv-simpleblue\buttons\Download.png" />
