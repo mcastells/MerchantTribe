@@ -882,6 +882,7 @@
     <Content Include="Images\sites\1\themes\theme-aurora\preview.png" />
     <Content Include="Images\sites\1\themes\theme-aurora\preview_big.png" />
     <Content Include="Images\sites\1\themes\theme-aurora\styles.css" />
+    <Content Include="Images\sites\1\themes\theme-aurora\templates\scripts\ProductThumbnail.js" />
     <Content Include="Images\sites\1\themes\theme-bv-simpleblue\buttons\addtocart.png" />
     <Content Include="Images\sites\1\themes\theme-bv-simpleblue\buttons\CreateAccount.png" />
     <Content Include="Images\sites\1\themes\theme-bv-simpleblue\buttons\Download.png" />

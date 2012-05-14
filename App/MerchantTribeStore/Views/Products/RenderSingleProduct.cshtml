@@ -14,18 +14,22 @@ else
 {
   <text><div class="record"></text>
 }
-  <div class="recordimage">
-  <a href="@Model.ProductLink">
-  <img class="productThumbnail" src="@Model.ImageUrl" border="0" alt="@Model.Item.ImageFileSmallAlternateText" /></a>
+  <a class="productImageLink" href="@Model.ProductLink">
+  <div class="recordimage" style="background: transparent url('@Model.ImageUrl') no-repeat;">
+  @*<img class="productThumbnail" src="@Model.ImageUrl" border="0" alt="@Model.Item.ImageFileSmallAlternateText" />*@
   </div>
+  </a>
+  <a class="productInfo" href="@Model.ProductLink">
   
-  <div class="productInfo" style="display: none;">
+        <img src="https://s3.amazonaws.com/illtee-web/shirt-icon.png" class="right" alt="Shirt" />
       <div class="recordname">
-      <a href="@Model.ProductLink">@Model.Item.ProductName</a>
+        @Model.Item.ProductName
       </div>
       <div class="productArtist">
-      <a href="@Model.ProductLink">by @Model.Item.CustomProperties["Artist"]</a></div>
-  </div>
+        by @Model.Item.CustomProperties["Artist"]</div>
+
+
+  </a>
   @*<div class="recordsku">
   <a href="@Model.ProductLink">@Model.Item.Sku</a>
   </div>
