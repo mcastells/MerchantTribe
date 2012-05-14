@@ -392,6 +392,7 @@ namespace MerchantTribe.Commerce.Content
             if (result == string.Empty) result = GetSystemTemplatePart(partName);
             return result;
         }
+
         public string GetTemplateFromCurrentTheme(params string[] templates)
         {
             string result = string.Empty;

@@ -34,13 +34,15 @@ a, a:visited, a:hover {color:#fff; font-weight: bold; text-decoration: none; }
 #site-wrapper {width:900px; margin:0 auto;padding:0;}
 
 /* Header */
-#header {height:144px;width:900px}
+#header {height:144px;width:900px; }
 #header #logo-area {margin-top: 44px;position: absolute;}
 #header #logo-area a img {margin:0;}
 #header #logo-area a.logo {font-size:36px;color:#000;text-decoration:none;
                            line-height:1em;padding:18px 0 0 18px;display:block;font-weight:bold;}
 #header ul {list-style:none;}                           
 #header li {float:left;list-style:none;}
+
+#links-area a, #header-menu a { color: #fff; font-size: 20px; text-transform: uppercase;}
 
 #links-area {position: absolute; margin: 54px 0 0 585px; }
 #links-area ul {float:right;}
@@ -59,8 +61,6 @@ a, a:visited, a:hover {color:#fff; font-weight: bold; text-decoration: none; }
 #search-form form {line-height:0;}	      
 #search-form .searchinput {height:20px;margin:0;padding:0;position:relative;left:0;top:-9px;}
 #search-form .searchgo {margin:3px 0 0 0;}
-
-#links-area a, #header-menu a { color: #fff; font-size: 16px; }
 
 /* Main Content Wrapper */
 #main-content {width:940px;margin:0 auto;}

@@ -48,7 +48,7 @@ namespace MerchantTribeStore.code.TemplateEngine.TagHandlers
                             if (subTotal.Trim().Length < 1) subTotal = "$0.00";
                         }
 
-                        innerContents = "<span>View Cart: " + itemCount + " items</span>";
+                        innerContents = "<span>Cart (" + itemCount + ")</span>";
 
                     }
                     break;
