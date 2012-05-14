@@ -20,13 +20,18 @@ else
   </div>
   </a>
   <a class="productInfo" href="@Model.ProductLink">
-  
+      @if (Model.Item.ProductTypeId == "1c36dac8-09ca-426c-879c-af12d4d2b79e")
+      {
         <img src="https://s3.amazonaws.com/illtee-web/shirt-icon.png" class="right" alt="Shirt" />
+      }
       <div class="recordname">
         @Model.Item.ProductName
       </div>
+      @if (Model.Item.CustomProperties["Artist"] != null && Model.Item.CustomProperties["Artist"].Value != "")
+      {
       <div class="productArtist">
-        by @Model.Item.CustomProperties["Artist"]</div>
+        by @Model.Item.CustomProperties["Artist"].Value</div>
+      }
 
 
   </a>
