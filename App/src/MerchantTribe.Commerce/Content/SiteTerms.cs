@@ -211,7 +211,7 @@ namespace MerchantTribe.Commerce.Content
 				case SiteTermIds.RecentlyViewedItems:
 					return "Recently Viewed Items";
 				case SiteTermIds.RelatedItems:
-					return "You may also like...";
+					return "Check these out...";
 				case SiteTermIds.RememberUser:
 					return "Remember Me";
 				case SiteTermIds.ReturnForm:
