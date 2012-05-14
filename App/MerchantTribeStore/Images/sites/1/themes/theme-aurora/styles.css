@@ -28,7 +28,7 @@ body { background: #0f0d16 url(https://s3.amazonaws.com/illtee-web/bg.jpg) cente
 strike {text-decoration:line-through;}
 
 /* links */
-a, a:visited, a:hover {color:#fff; font-weight: bold; text-decoration: none; }
+a, a:visited, a:hover {color:#fff; text-decoration: none; }
 
 /* Wraps the entire site */
 #site-wrapper {width:900px; margin:0 auto;padding:0;}
@@ -92,10 +92,11 @@ a, a:visited, a:hover {color:#fff; font-weight: bold; text-decoration: none; }
 .flash-message-warning {background-color: #fffed7;border-color: #B3B300;}
 
 /* General Text */
-h1 {font-size:24px;line-height:1.5em;font-weight:bold;}
-h2 {font-size:18px;line-height:1em;color:#666;margin:9px 0;font-weight:bold;}
-h3 {font-weight:bold;color:#666;font-size: 13px;line-height:1.385em;}
-h4 {font-weight:bold;font-size:14px;line-height:1.286em;margin:0 9px;padding:7px 9px 9px 9px;color:#333;}
+p, .text { font-size: 14px; }
+h1 {font-size:26px;font-weight:bold;line-height:1.5em;}
+h2 {font-size:20px;font-weight:bold;line-height:1.5em;}
+h3 {font-size:16px;font-weight:bold;line-height:1.5em;}
+h4 {font-size:14px;font-weight:bold;line-height:1.5em;}
 
 .smalltext {font-size:11px;color:#666;line-height:1.63636;}
 .curved {-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;}
