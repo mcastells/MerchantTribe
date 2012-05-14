@@ -228,7 +228,7 @@ h4 {font-weight:bold;font-size:14px;line-height:1.286em;margin:0 9px;padding:7px
 
 /* Column Blocks */
 .decoratedblock { position: relative; margin: 0 0 15px 0; padding: 0 0 5px 0; position: relative; }
-.blockcontent { padding: 5px; }
+.blockcontent { /*padding: 5px;*/ }
 
 /* Home Page Center Column Blocks */
 #homepagecolumn2 .decoratedblock { background: none; }
@@ -924,8 +924,16 @@ td.producttotalcolumn, td.productpricecolumn
 	position: relative;
 	height: 275px;
 	width: 275px;
-	margin: 0px 20px 40px 0px;
+	margin: 0px 0px 60px 0px;
 	overflow: hidden;
+}
+.record.firstrecord
+{
+	margin: 0px 37px 60px 0px;
+}
+.record.lastrecord
+{
+	margin: 0px 0px 60px 37px;
 }
 .recordname, .productArtist
 {
