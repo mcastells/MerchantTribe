@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="Default Web Site/MerchantTribeStore_deploy" />
+  <setParameter name="commerce6ConnectionString-Web.config Connection String" value="Server=tipper.illtee.com;database=illuminateedev;uid=illtee-dev;password=caWaze9u;" />
+</parameters>

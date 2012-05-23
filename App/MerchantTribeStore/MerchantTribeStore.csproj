@@ -22,7 +22,8 @@
     </SccAuxPath>
     <SccProvider>
     </SccProvider>
-    <SilverlightApplicationList>{24A4744E-6A96-4DED-B4D9-018C3171C8DA}|..\src\BVSoftware.SilverlightFileUpload\BVSoftware.SilverlightFileUpload.csproj|ClientBin|False</SilverlightApplicationList>
+    <SilverlightApplicationList>
+    </SilverlightApplicationList>
     <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -36,6 +37,7 @@
     <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
     <ExcludeApp_Data>true</ExcludeApp_Data>
     <RunCodeAnalysis>true</RunCodeAnalysis>
+    <DesktopBuildPackageLocation>Package\MerchantTribeStore.zip</DesktopBuildPackageLocation>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -44,6 +46,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PackageAsSingleFile>true</PackageAsSingleFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release-Hosted|AnyCPU'">
     <OutputPath>bin\</OutputPath>
@@ -893,7 +896,6 @@
     <Content Include="Scripts\newsfeed.js" />
     <Content Include="Scripts\receipt.js" />
     <Content Include="Scripts\checkoutpaymenterror.js" />
-    <Content Include="ClientBin\BVSoftware.SilverlightFileUpload.xap" />
     <Content Include="ClientBin\MerchantTribe.SilverlightFileUpload.xap" />
     <Content Include="content\themes\common.css" />
     <Content Include="content\themes\commonupdates.css" />
@@ -2251,12 +2253,6 @@
     <Content Include="Scripts\tabs.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>
@@ -4588,13 +4584,7 @@
     <Content Include="Views\Web.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Web.Release-Hosted.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
     <Content Include="Web.Release-Source.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
-    <Content Include="Web.Release-HostedStaging.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <None Include="content\themes\ButtonsSmall.psd" />
