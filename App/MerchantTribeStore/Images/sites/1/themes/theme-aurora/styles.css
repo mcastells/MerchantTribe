@@ -906,6 +906,27 @@ td.producttotalcolumn, td.productpricecolumn
 	float: right;
 }
 
+/* Feature Rotator */
+#featureRotator
+{
+	position: relative;
+	background: transparent url('//cdn.illtee.com/images/featureRotatorBG1.jpg') no-repeat;
+	height: 210px;
+	width: 455px;
+	margin-bottom: 70px;
+	padding: 60px 30px 35px 415px;
+}
+
+#featureRotator #videoContainer
+{
+	position: absolute;
+	top: 42px;
+	left: -31px;
+	width: 406px;
+	height: 231px;
+	background: transparent url('cdn.illtee.com/images/videoBG.png') no-repeat;
+}
+
 /* Product Thumbnails */
 .record
 {
