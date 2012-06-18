@@ -22,3 +22,5 @@ NoAutoInstallBuilds.txt
 AutoInstallBuilds.txt
 
 
+*.zip
+*.7z
