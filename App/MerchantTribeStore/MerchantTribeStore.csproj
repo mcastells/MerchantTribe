@@ -929,7 +929,6 @@
     <Content Include="Scripts\newsfeed.js" />
     <Content Include="Scripts\receipt.js" />
     <Content Include="Scripts\checkoutpaymenterror.js" />
-    <Content Include="ClientBin\MerchantTribe.SilverlightFileUpload.xap" />
     <Content Include="content\themes\common.css" />
     <Content Include="content\themes\commonupdates.css" />
     <Content Include="content\themes\theme-bv-craftystore\buttons\Go.png" />
@@ -4542,6 +4541,7 @@
     <Folder Include="Areas\AdminContent\Views\Shared\" />
     <Folder Include="Areas\ContentBlocks\Views\Shared\" />
     <Folder Include="aspnet_client\system_web\4_0_30128\" />
+    <Folder Include="ClientBin\" />
     <Folder Include="content\themes\theme-bv-simpleblue\assets\" />
     <Folder Include="content\themes\theme-bv-simplegray\assets\" />
     <Folder Include="content\themes\theme-bv-simplegreen\assets\" />
