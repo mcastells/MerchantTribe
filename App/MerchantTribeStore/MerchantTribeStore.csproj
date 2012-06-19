@@ -924,13 +924,13 @@
     <Content Include="Images\sites\1\themes\theme-aurora\templates\parts\full-header.html" />
     <Content Include="Images\sites\1\themes\theme-aurora\preview.png" />
     <Content Include="Images\sites\1\themes\theme-aurora\preview_big.png" />
+    <Content Include="Images\sites\1\themes\theme-aurora\styles.css" />
     <Content Include="Images\sites\1\themes\theme-aurora\templates\parts\header.html" />
     <Content Include="Images\sites\1\themes\theme-aurora\templates\home.html" />
+    <Content Include="Images\sites\1\themes\theme-aurora\templates\scripts\jquery.backstretch.min.js" />
     <Content Include="Images\sites\1\themes\theme-aurora\templates\scripts\jquery.screwdefaultbuttons.min.js" />
     <Content Include="Images\sites\1\themes\theme-aurora\templates\scripts\ProductThumbnail.js" />
     <Content Include="Images\sites\1\themes\theme-aurora\templates\scripts\site.js" />
-    <Content Include="Images\sites\1\themes\theme-aurora\supersized.core.css" />
-    <Content Include="Images\sites\1\themes\theme-aurora\templates\scripts\supersized.core.3.2.1.min.js" />
     <Content Include="Scripts\ImageRotator.js" />
     <Content Include="Scripts\newsfeed.js" />
     <Content Include="Scripts\receipt.js" />
@@ -4554,7 +4554,6 @@
     <Folder Include="content\themes\theme-bv-simplepurple\assets\" />
     <Folder Include="content\themes\theme-bv-simplered\assets\" />
     <Folder Include="Files\" />
-    <Folder Include="Images\sites\1\themes\theme-aurora\templates\styles\" />
     <Folder Include="Scripts\tinymce\plugins\autosave\images\" />
   </ItemGroup>
   <ItemGroup>
