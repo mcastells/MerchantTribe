@@ -91,43 +91,46 @@ namespace MerchantTribeStore.Helpers
 
         public static string JQueryIncludes(string baseScriptFolder, bool IsSecure)
         {
-            StringBuilder sb = new StringBuilder();
-            if (baseScriptFolder.EndsWith("/") == false)
-            {
-                baseScriptFolder += "/";
-            }
+            // CUT: references are broken & why the fuck are they hard-coded and not in the template file?
+            return string.Empty;
+
+            //    StringBuilder sb = new StringBuilder();
+            //    if (baseScriptFolder.EndsWith("/") == false)
+            //    {
+            //        baseScriptFolder += "/";
+            //    }
 
 
-            bool UseCDN = false;
+            //    bool UseCDN = false;
 
-            if (UseCDN)
-            {
-                // CDN JQuery
-                if (IsSecure)
-                {
-                    sb.Append("<script src='https://ajax.microsoft.com/ajax/jQuery/jquery-1.5.1.min.js' type=\"text/javascript\"></script>");
-                }
-                else
-                {
-                    sb.Append("<script src='http://ajax.microsoft.com/ajax/jQuery/jquery-1.5.1.min.js' type=\"text/javascript\"></script>");
-                }
-            }
-            else
-            {
-                // Local JQuery
-                sb.Append("<script src='" + baseScriptFolder + "jquery-1.5.1.min.js' type=\"text/javascript\"></script>");
-            }
-            sb.Append(System.Environment.NewLine);
-
-            
-            
-            sb.Append("<script src='" + baseScriptFolder + "jquery-ui-1.8.7.custom/js/jquery-ui-1.8.7.custom.min.js' type=\"text/javascript\"></script>");
-            sb.Append("<script src='" + baseScriptFolder + "jquery.form.js' type=\"text/javascript\"></script>");
-            sb.Append(System.Environment.NewLine);
+            //    if (UseCDN)
+            //    {
+            //        // CDN JQuery
+            //        if (IsSecure)
+            //        {
+            //            sb.Append("<script src='https://ajax.microsoft.com/ajax/jQuery/jquery-1.5.1.min.js' type=\"text/javascript\"></script>");
+            //        }
+            //        else
+            //        {
+            //            sb.Append("<script src='http://ajax.microsoft.com/ajax/jQuery/jquery-1.5.1.min.js' type=\"text/javascript\"></script>");
+            //        }
+            //    }
+            //    else
+            //    {
+            //        // Local JQuery
+            //        sb.Append("<script src='" + baseScriptFolder + "jquery-1.5.1.min.js' type=\"text/javascript\"></script>");
+            //    }
+            //    sb.Append(System.Environment.NewLine);
 
 
 
-            return sb.ToString();
+            //    sb.Append("<script src='" + baseScriptFolder + "jquery-ui-1.8.7.custom/js/jquery-ui-1.8.7.custom.min.js' type=\"text/javascript\"></script>");
+            //    sb.Append("<script src='" + baseScriptFolder + "jquery.form.js' type=\"text/javascript\"></script>");
+            //    sb.Append(System.Environment.NewLine);
+
+
+
+            //    return sb.ToString();
         }
 
         public static string RenderSuperMenu(MerchantTribeApplication app)
@@ -184,7 +187,7 @@ namespace MerchantTribeStore.Helpers
 
             // Marketing Menu
             sb.Append(OpenMenu("Marketing", selected, AdminTabType.Marketing));
-            sb.Append(AddMenuItem("Promotions", "marketing/promotions.aspx", root));            
+            sb.Append(AddMenuItem("Promotions", "marketing/promotions.aspx", root));
             sb.Append(AddMenuItem(app.CurrentStore.Settings.RewardsPointsName, "marketing/rewardspoints.aspx", root));
             sb.Append(CloseMenu());
 
@@ -209,7 +212,7 @@ namespace MerchantTribeStore.Helpers
             sb.Append(AddMenuItem("File Manager", "content/filemanager", root));
             sb.Append(AddMenuItem("URL Mapper", "content/customurl.aspx", root));
             sb.Append(AddMenuItem("--------------", "catalog/categories.aspx", root));
-            sb.Append(AddMenuItem("Site Meta Tags", "content/metatags.aspx", root));            
+            sb.Append(AddMenuItem("Site Meta Tags", "content/metatags.aspx", root));
             sb.Append(AddMenuItem("Policies", "content/policies.aspx", root));
             sb.Append(AddMenuItem("Email Templates", "content/EmailTemplates.aspx", root));
             sb.Append(AddMenuItem("--------------", "catalog/categories.aspx", root));
@@ -235,7 +238,7 @@ namespace MerchantTribeStore.Helpers
             sb.Append(AddMenuItem("  Cancelled", "orders/default.aspx?p=1&mode=6", root));
             sb.Append(AddMenuItem("  All Orders", "orders/default.aspx?p=1&mode=0", root));
             sb.Append(AddMenuItem("--------------", "orders/default.aspx?p=1&mode=0", root));
-            
+
             //sb.Append(AddMenuItem("UPS Labels", "orders/upsonlinetools.aspx", root));
             //sb.Append(AddMenuItem("Returns", "orders/rma.aspx", root));
             sb.Append(CloseMenu());
@@ -354,7 +357,7 @@ namespace MerchantTribeStore.Helpers
         {
             return "<div id=\"footer\"><div id=\"copyright\">&copy; Copyright 2002-" + DateTime.Now.Year.ToString() + " BV Software LLC, All Rights Reserved</div></div>";
         }
-        
+
         public static string RenderPartialToString(string controlName, object viewData)
         {
             ViewDataDictionary vd = new ViewDataDictionary(viewData);
@@ -373,7 +376,7 @@ namespace MerchantTribeStore.Helpers
             }
 
             return sb.ToString();
-        }        
+        }
 
     }
 }

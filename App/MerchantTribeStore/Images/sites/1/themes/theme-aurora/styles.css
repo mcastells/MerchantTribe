@@ -19,7 +19,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 }
 
 /* Body Styles */
-body { background: #0f0d16 url(https://s3.amazonaws.com/illtee-web/bg.jpg) center top no-repeat; font-family: Arial, Verdana, Sans-Serif; color: #fff; font-size: 16px; line-height:1.5em;}
+body { background: #0f0d16; font-family: Arial, Verdana, Sans-Serif; color: #fff; font-size: 16px; line-height:1.5em;}
 
 .clear {clear:both;}
 .padded {padding:10px;}

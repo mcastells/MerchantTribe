@@ -56,7 +56,8 @@ namespace MerchantTribeStore.Controllers.Shared
                 this.ViewData["analyticsbottom"] = MTApp.CurrentStore.Settings.Analytics.BottomAnalytics ?? string.Empty;
 
                 // JQuery
-                ViewBag.JqueryInclude = Helpers.Html.JQueryIncludes(Url.Content("~/scripts"), this.Request.IsSecureConnection);
+                // CUT: references are broken & why the fuck are they hard-coded and not in the template file?
+                //ViewBag.JqueryInclude = Helpers.Html.JQueryIncludes(Url.Content("~/scripts"), this.Request.IsSecureConnection);
 
                 // header and footer            
                 string header = MerchantTribe.Commerce.Storage.DiskStorage.ReadCustomHeader(MTApp.CurrentStore.Id, MTApp.CurrentStore.Settings.ThemeId);
