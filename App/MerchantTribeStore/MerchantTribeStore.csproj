@@ -915,6 +915,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Images\sites\1\themes\theme-aurora\ColumnData.xml" />
+    <Content Include="Images\sites\1\themes\theme-aurora\styles.css" />
     <Content Include="Images\sites\1\themes\theme-aurora\templates\inner-page.html" />
     <Content Include="Images\sites\1\themes\theme-aurora\templates\default-no-menu.html" />
     <Content Include="Images\sites\1\themes\theme-aurora\templates\default.html" />
@@ -923,9 +924,9 @@
     <Content Include="Images\sites\1\themes\theme-aurora\templates\parts\full-header.html" />
     <Content Include="Images\sites\1\themes\theme-aurora\preview.png" />
     <Content Include="Images\sites\1\themes\theme-aurora\preview_big.png" />
-    <Content Include="Images\sites\1\themes\theme-aurora\site.css" />
     <Content Include="Images\sites\1\themes\theme-aurora\templates\parts\header.html" />
     <Content Include="Images\sites\1\themes\theme-aurora\templates\home.html" />
+    <Content Include="Images\sites\1\themes\theme-aurora\templates\scripts\jquery.screwdefaultbuttons.min.js" />
     <Content Include="Images\sites\1\themes\theme-aurora\templates\scripts\ProductThumbnail.js" />
     <Content Include="Images\sites\1\themes\theme-aurora\templates\scripts\site.js" />
     <Content Include="Images\sites\1\themes\theme-aurora\supersized.core.css" />

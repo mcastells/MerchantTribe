@@ -22,13 +22,15 @@ namespace MerchantTribe.Commerce.Catalog.Options
             StringBuilder sb = new StringBuilder();
             foreach (OptionItem o in baseOption.Items)
             {
-                sb.Append("<input type=\"radio\" name=\"opt" + baseOption.Bvin.Replace("-", "") + "\" value=\"" + o.Bvin.Replace("-", "") + "\"");                
+                sb.Append("<input id=\"" + baseOption.Name + "-" + o.Name + "\" type=\"radio\" name=\"opt" + baseOption.Bvin.Replace("-", "") + "\" value=\"" + o.Bvin.Replace("-", "") + "\"");                
                 sb.Append(" class=\"isoption radio" + baseOption.Bvin.Replace("-", "") + "\" ");                                
                 if (IsSelected(o, selections))
                 {
                     sb.Append(" checked=\"checked\" ");
                 }
-                sb.Append("/>" + o.Name + "<br />");
+                sb.Append("/>");
+                if (!String.Equals(baseOption.Name, "Size", StringComparison.InvariantCultureIgnoreCase))
+                    sb.Append(o.Name);
             }
             return sb.ToString();
         }

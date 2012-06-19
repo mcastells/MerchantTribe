@@ -1,7 +1,50 @@
 ﻿@model MerchantTribeStore.Models.ProductPageViewModel
-
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#Size-S').screwDefaultButtons({
+            checked: "url(//cdn.illtee.com/forms/Size-S-checked.png)",
+            unchecked: "url(//cdn.illtee.com/forms/Size-S-unchecked.png)",
+            width: 47,
+            height: 44
+        });
+        $('#Size-M input:radio').screwDefaultButtons({
+            checked: "url(//cdn.illtee.com/forms/Size-M-checked.jpg)",
+            unchecked: "url(//cdn.illtee.com/forms/Size-M-unchecked.jpg)",
+            width: 52,
+            height: 44
+        });
+        $('#Size-L input:radio').screwDefaultButtons({
+            checked: "url(//cdn.illtee.com/forms/Size-L-checked.jpg)",
+            unchecked: "url(//cdn.illtee.com/forms/Size-L-unchecked.jpg)",
+            width: 48,
+            height: 44
+        });
+        $('#Size-XL input:radio').screwDefaultButtons({
+            checked: "url(//cdn.illtee.com/forms/Size-XL-checked.jpg)",
+            unchecked: "url(//cdn.illtee.com/forms/Size-XL-unchecked.jpg)",
+            width: 57,
+            height: 44
+        });
+        $('#Size-2XL input:radio').screwDefaultButtons({
+            checked: "url(//cdn.illtee.com/forms/Size-XXL-checked.png)",
+            unchecked: "url(//cdn.illtee.com/forms/Size-XXL-unchecked.png)",
+            width: 71,
+            height: 44
+        });
+    });
+</script>
+<style type="text/css">
+    .styledRadio
+    {
+        /* Your styles here */
+    }
+    
+    .styledCheckbox
+    {
+        /* Your styles here */
+    }
+</style>
 @Html.Action("Index", "ContentColumn", new { id = "Promo Banner" })
-
 <div id="productpage">
     @Html.Action("ProductTrail", "BreadCrumb", new { product = Model.LocalProduct })
     @Html.Action("Index", "ContentColumn", new { id = Model.LocalProduct.PreContentColumnId })
@@ -19,6 +62,7 @@
             @Html.Raw((string)TempData["messages"])
             <span id="sku" itemprop="productID">@Model.LocalProduct.Sku</span> <span class="stockdisplay">@Html.Raw(Model.StockMessage)</span>
             <div id="productcontrols">
+
                 <form action="@Url.Content("~/" + Model.LocalProduct.UrlSlug)" method="post">
                 @Html.Raw(Model.PreRenderedOptions)
                 <div id="pricewrapper">@Html.Raw(Model.PreRenderedPrices)</div>
@@ -39,12 +83,12 @@
                         <input id="addtocartbutton" type="image" src="@ViewBag.AddToCartButtonUrl" alt="Add To Cart" />                            
                         if (Model.IsAvailableForWishList)
                         {
-                           <text><br />&nbsp;<br /></text>
-                           <input id="savelaterbutton" name="savelaterbutton" type="image" src="@ViewBag.SaveLaterButton" alt="Save For Later" value="SaveLater" />
+                        <text><br />
+                        &nbsp;<br /></text>
+                        <input id="savelaterbutton" name="savelaterbutton" type="image" src="@ViewBag.SaveLaterButton" alt="Save For Later" value="SaveLater" />
                         }
                     }
                 </div>
-
                 @if (ViewBag.UseFaceBook == true)
                 {
                     
@@ -69,25 +113,23 @@
                         {
                             PageUrl = ViewBag.CurrentUrl,
                             CountPosition = MerchantTribeStore.Models.GooglePlusOneCountPosition.Inline,
-                            Size = MerchantTribeStore.Models.GooglePlusOneSize.Standard                            
+                            Size = MerchantTribeStore.Models.GooglePlusOneSize.Standard
                         });
-                    
-                }
 
+                }
                 <input type="hidden" id="productbvin" name="productbvin" value="@Model.LocalProduct.Bvin" />
                 <input type="hidden" id="lineitemid" name="lineitemid" value="@Model.LineItemId" />
                 <!--VOLUME DISCOUNTS HERE-->
-                <div class="clear">
-                </div>
+                <div class="clear"></div>
                 </form>
+
             </div>
             <div name="productdescription" itemprop="description">
-            @Html.Raw(Model.LocalProduct.LongDescription)
-            </div>     
-            @Html.Raw(Model.PreRenderedTypeValues)                  
+                @Html.Raw(Model.LocalProduct.LongDescription)
+            </div>
+            @Html.Raw(Model.PreRenderedTypeValues)
         </div>
-        <div class="clear">
-            &nbsp;</div>
+        <div class="clear">&nbsp;</div>
     </div>
     <div class="informationcolumn">
         <ul class="tabnavigation">
@@ -101,7 +143,7 @@
                 <li id="@("TabNav" + t.Bvin)"><a href="@("#Tab" + t.Bvin)">@t.TabTitle</a></li>
             }
         </ul>
-        <div class="tabs">            
+        <div class="tabs">
             <div id="tabreviews">
                 <div class="padded">
                     <h2>
@@ -111,12 +153,11 @@
                             @Html.Action("TopReviews", "ProductReviews", new { howMany = 3, reviews = Model.LocalProduct.ReviewsApproved })
                             @if (Model.LocalProduct.Reviews.Count > 0)
                             {
-                                <div class="ProductReviewLinks">
-                                <a href="@Url.Content("~/Products/Reviews/" + Model.LocalProduct.UrlSlug)">View All
-                                    Reviews</a><br />
+                                <div class="ProductReviewLinks"><a href="@Url.Content("~/Products/Reviews/" + Model.LocalProduct.UrlSlug)">
+                                    View All Reviews</a><br />
                                 </div>
                             }
-                        </div>                    
+                        </div>
                         <div class="reviewform">
                             @if (Model.LocalProduct.AllowReviews)
                             {                            
@@ -125,56 +166,53 @@
                                 <div id="submitreviewmessage"></div>
                                 <form action="@Url.Content("~/productreviews/create")" method="post" id="submitreviewform">
                                 <table class="formtable">
-                                <tr>
-                                    <td class="formlabel" valign="top" align="right">
-                                        Rating
-                                    </td>
-                                    <td>
-                                        <select name="rating">
-                                            <option value="5" selected="selected">5 Stars</option>
-                                            <option value="4">4 Stars</option>
-                                            <option value="3">3 Stars</option>
-                                            <option value="2">2 Stars</option>
-                                            <option value="1">1 Star</option>
-                                        </select>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="formlabel" valign="top" align="right">
-                                        Your Review
-                                    </td>
-                                    <td>
-                                        <textarea name="newreview" class="forminput" rows="6" cols="30"></textarea>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="formlabel">
-                                        &nbsp;
-                                    </td>
-                                    <td>
-                                        <input type="image" src="@ViewBag.SubmitButtonUrl" alt="Submit" id="submitreviewbutton" />
-                                    </td>
-                                </tr>
-                            </table>
+                                    <tr>
+                                        <td class="formlabel" valign="top" align="right">
+                                            Rating
+                                        </td>
+                                        <td>
+                                            <select name="rating">
+                                                <option value="5" selected="selected">5 Stars</option>
+                                                <option value="4">4 Stars</option>
+                                                <option value="3">3 Stars</option>
+                                                <option value="2">2 Stars</option>
+                                                <option value="1">1 Star</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="formlabel" valign="top" align="right">
+                                            Your Review
+                                        </td>
+                                        <td>
+                                            <textarea name="newreview" class="forminput" rows="6" cols="30"></textarea>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="formlabel">
+                                            &nbsp;
+                                        </td>
+                                        <td>
+                                            <input type="image" src="@ViewBag.SubmitButtonUrl" alt="Submit" id="submitreviewbutton" />
+                                        </td>
+                                    </tr>
+                                </table>
                                 <input type="hidden" name="productbvin" value="@Model.LocalProduct.Bvin" />
-                            </form>
+                                </form>
                             }
                         </div>
-                        <div class="clear">
-                        </div>
+                        <div class="clear"></div>
                     </div>
                 </div>
             </div>
             <div id="tabsuggesteditems">
-                <div class="padded">
-                    @*<h2>@ViewBag.RelatedItemsTitle</h2>*@
+                <div class="padded">@*<h2>@ViewBag.RelatedItemsTitle</h2>*@
                     <div class="relateditems">
                         @foreach (var item in Model.RelatedItems)
                         {
                             @Html.Partial("RenderSingleProduct", item);
                         }
-                        <div class="clear">
-                        </div>
+                        <div class="clear"></div>
                     </div>
                 </div>
             </div>
@@ -192,10 +230,8 @@
     @Html.Action("Index", "ContentColumn", new { id = Model.LocalProduct.PostContentColumnId })
 </div>
 <div class="modal2">
-    <div class="popoverframe2">
-        <a id="dialogclose" href="#">Close</a><br />
+    <div class="popoverframe2"><a id="dialogclose" href="#">Close</a><br />
         <iframe id="popoverpage2"></iframe>
         <br />
-        <a id="dialogclose2" href="#">Close</a>
-    </div>
+        <a id="dialogclose2" href="#">Close</a> </div>
 </div>
