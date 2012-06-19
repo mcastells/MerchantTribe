@@ -59,8 +59,10 @@
         <div class="actioncolumn">
             <h1 itemprop="name">
                 @Model.LocalProduct.ProductName</h1>
-            
+
             <div id="pricewrapper">@Html.Raw(Model.PreRenderedPrices)</div>
+            
+            <div class="clear"></div>
 
             @Html.Raw((string)TempData["messages"])
             
