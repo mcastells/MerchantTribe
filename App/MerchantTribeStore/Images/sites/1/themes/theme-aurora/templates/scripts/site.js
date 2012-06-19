@@ -1,4 +1,4 @@
 ﻿$(function () {
     // bg
-    $.backstretch('https://s3.amazonaws.com/illtee-web/bg.jpg');
+    $.backstretch('https://s3.amazonaws.com/illtee-web/layout/bg.jpg');
 });

@@ -15,15 +15,22 @@
         </div>
         <div class="actioncolumn">
             <h1 itemprop="name">
-                <span>@Model.LocalProduct.ProductName</span></h1>
+                @Model.LocalProduct.ProductName</h1>
+            
+            <div id="pricewrapper">@Html.Raw(Model.PreRenderedPrices)</div>
+
             @Html.Raw((string)TempData["messages"])
-            <span id="sku" itemprop="productID">@Model.LocalProduct.Sku</span> <span class="stockdisplay">@Html.Raw(Model.StockMessage)</span>
+            
+            @*<span id="sku" itemprop="productID">@Model.LocalProduct.Sku</span>*@
+            
             <div id="productcontrols">
                 <form action="@Url.Content("~/" + Model.LocalProduct.UrlSlug)" method="post">
+                
                 @Html.Raw(Model.PreRenderedOptions)
-                <div id="pricewrapper">@Html.Raw(Model.PreRenderedPrices)</div>
+                <span class="stockdisplay">@Html.Raw(Model.StockMessage)</span>
+
                 <label for="quantityfield">
-                    Quantity</label>
+                    How many?</label>
                 <span class="choice">
                     @if (Model.IsAvailableForSale)
                     {
@@ -36,13 +43,19 @@
                 <div class="buttons">
                     @if (Model.IsAvailableForSale)
                     {
-                        <input id="addtocartbutton" type="image" src="@ViewBag.AddToCartButtonUrl" alt="Add To Cart" />                            
+                        <input id="addtocartbutton" type="button" alt="Add To Cart" value="Add To Cart" />                            
                         if (Model.IsAvailableForWishList)
                         {
                            <text><br />&nbsp;<br /></text>
                            <input id="savelaterbutton" name="savelaterbutton" type="image" src="@ViewBag.SaveLaterButton" alt="Save For Later" value="SaveLater" />
                         }
                     }
+                </div>
+
+                @Html.Raw(Model.PreRenderedTypeValues)
+
+                <div name="productdescription" itemprop="description">
+                    @Html.Raw(Model.LocalProduct.LongDescription)
                 </div>
 
                 @if (ViewBag.UseFaceBook == true)
@@ -81,10 +94,7 @@
                 </div>
                 </form>
             </div>
-            <div name="productdescription" itemprop="description">
-            @Html.Raw(Model.LocalProduct.LongDescription)
-            </div>     
-            @Html.Raw(Model.PreRenderedTypeValues)                  
+            
         </div>
         <div class="clear">
             &nbsp;</div>
