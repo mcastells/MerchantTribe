@@ -915,7 +915,6 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Images\sites\1\themes\theme-aurora\ColumnData.xml" />
-    <Content Include="Images\sites\1\themes\theme-aurora\styles.css" />
     <Content Include="Images\sites\1\themes\theme-aurora\templates\inner-page.html" />
     <Content Include="Images\sites\1\themes\theme-aurora\templates\default-no-menu.html" />
     <Content Include="Images\sites\1\themes\theme-aurora\templates\default.html" />

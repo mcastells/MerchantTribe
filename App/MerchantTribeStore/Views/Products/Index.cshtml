@@ -90,7 +90,8 @@
                 <div class="buttons">
                     @if (Model.IsAvailableForSale)
                     {
-                        <input id="addtocartbutton" type="button" alt="Add To Cart" value="Add To Cart" />                            
+                        <input id="addtocartbutton" type="submit" value="Add To Cart" />
+                        
                         if (Model.IsAvailableForWishList)
                         {
                         <text><br />
@@ -146,7 +147,7 @@
     </div>
     <div class="informationcolumn">
         <ul class="tabnavigation">
-            @if (Model.LocalProduct.Reviews.Count > 0 || Model.LocalProduct.AllowReviews)
+            @if (Model.LocalProduct.AllowReviews)
             {
                 <li id="TabNavReviews"><a href="#tabreviews">Reviews</a></li>
             }
@@ -157,6 +158,8 @@
             }
         </ul>
         <div class="tabs">
+            @if (Model.LocalProduct.AllowReviews)
+            {
             <div id="tabreviews">
                 <div class="padded">
                     <h2>
@@ -218,8 +221,9 @@
                     </div>
                 </div>
             </div>
+            }
             <div id="tabsuggesteditems">
-                <div class="padded">@*<h2>@ViewBag.RelatedItemsTitle</h2>*@
+                <div class="padded"><h2>@ViewBag.RelatedItemsTitle</h2>
                     <div class="relateditems">
                         @foreach (var item in Model.RelatedItems)
                         {

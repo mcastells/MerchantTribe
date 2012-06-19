@@ -40,6 +40,14 @@ $(document).keyup(function(e) {
 
 $(document).ready(function () {
 
+    // moved from productscontroller
+    $(".isoption").change(function () {
+        EvaluateSelections();
+        return true;
+    });
+    EvaluateSelections();
+
+
     // AdditionalProductImage
     $('.additionalimages a').mouseover(function () {
         var newurl = $(this).attr('alt');

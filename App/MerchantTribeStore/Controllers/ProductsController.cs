@@ -308,19 +308,19 @@ namespace MerchantTribeStore.Controllers
             // end evaluate function
             
 
+            // CUT: moved this to separate ProductPage.js b/c there's no reason this should be hard-coded
+            //// Document Ready Function
+            //sb.Append("$(document).ready(function() {" + System.Environment.NewLine);
 
-            // Document Ready Function
-            sb.Append("$(document).ready(function() {" + System.Environment.NewLine);
+            //sb.Append("$(\".isoption\").change(function() {" + System.Environment.NewLine);
+            //sb.Append(" EvaluateSelections();" + System.Environment.NewLine);
+            //sb.Append(" return true;" + System.Environment.NewLine);
+            //sb.Append("});" + System.Environment.NewLine);
 
-            sb.Append("$(\".isoption\").change(function() {" + System.Environment.NewLine);
-            sb.Append(" EvaluateSelections();" + System.Environment.NewLine);
-            sb.Append(" return true;" + System.Environment.NewLine);
-            sb.Append("});" + System.Environment.NewLine);
-
-            sb.Append(" EvaluateSelections(); " + System.Environment.NewLine);
+            //sb.Append(" EvaluateSelections(); " + System.Environment.NewLine);
            
-            sb.Append("});" + System.Environment.NewLine + System.Environment.NewLine);
-            // End of Document Ready
+            //sb.Append("});" + System.Environment.NewLine + System.Environment.NewLine);
+            //// End of Document Ready
 
             sb.Append("</script>" + System.Environment.NewLine);
             model.JavaScripts += sb.ToString();            
