@@ -21,6 +21,8 @@ Web.Release-Source.config
 NoAutoInstallBuilds.txt
 AutoInstallBuilds.txt
 
-
+Packages/
 *.zip
 *.7z
+web.debug.config
+web.release.config

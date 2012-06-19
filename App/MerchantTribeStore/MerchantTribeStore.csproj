@@ -37,7 +37,7 @@
     <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
     <ExcludeApp_Data>true</ExcludeApp_Data>
     <RunCodeAnalysis>true</RunCodeAnalysis>
-    <DesktopBuildPackageLocation>Package\MerchantTribeStore.zip</DesktopBuildPackageLocation>
+    <DesktopBuildPackageLocation>..\..\Packages\Debug\MerchantTribeStore.zip</DesktopBuildPackageLocation>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -47,6 +47,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <PackageAsSingleFile>true</PackageAsSingleFile>
+    <DesktopBuildPackageLocation>..\..\Packages\Release\MerchantTribeStore.zip</DesktopBuildPackageLocation>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release-Hosted|AnyCPU'">
     <OutputPath>bin\</OutputPath>
@@ -4622,9 +4623,6 @@
     <Content Include="Views\Web.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Web.Release-Source.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
     <None Include="content\themes\ButtonsSmall.psd" />
     <None Include="content\themes\ButtonsTiny.psd" />
     <None Include="Scripts\jquery-ui-1.8.7.custom\development-bundle\demos\autocomplete\search.php" />
@@ -4708,6 +4706,12 @@
     <Content Include="Views\FlexPage\EditorPanel.cshtml" />
     <Content Include="Views\FlexPage\EditorPopup.cshtml" />
     <Content Include="Views\SuperStores\Destroy.cshtml" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
