@@ -2,6 +2,18 @@
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+<script type="text/javascript">
+
+    $(function () {
+        $('#cartcoupons-expand').click(function () {
+            $('#cartcoupons-form').slideToggle('fast');
+            return false;
+        });
+    });
+
+</script>
+
 <div id="carttitle">
     <h1>@Model.DisplayTitle</h1>
     @Html.Raw((string)TempData["messages"])
@@ -10,11 +22,11 @@
         {
             <h3>Your shopping cart is empty! <a href="@Html.Raw(Model.KeepShoppingUrl)">Keep Shopping</a> &raquo;</h3>                 
         }
-        else
+@*        else
         {
             <h3>@Model.CurrentOrder.TotalQuantity.ToString("#") Items in Cart</h3>
         }
-        
+*@        
     </div>
 </div>
 @if (Model.CartEmpty == false)
@@ -22,14 +34,17 @@
     <div id="cartcontainer">
         &nbsp;@Model.ItemListTitle
         <table class="cartproductgrid" id="ItemGridView" width="100%">
-            <tr>
-                <th>Product</th>
-                <th>&nbsp;</th>
-                <th>Price</th>
-                <th>Quantity</th>
-                <th>Total</th>
-                <th>&nbsp;</th>
-            </tr>
+            <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody>
             @foreach (var item in Model.LineItems)
             {
                 <tr>
@@ -50,7 +65,6 @@
                     <td class="productdetailscolumn">
                         <div id="cartitemdescription" runat="server" class="cartitemdescription">
                             <a href="@item.LinkUrl" title="@item.Item.ProductName">
-                                <div class="cartsku">@item.Item.ProductSku</div>
                                 <div class="cartproductname">@item.Item.ProductName</div>
                                 @Html.Raw(item.Item.ProductShortDescription)
                                 @if (item.HasDiscounts)
@@ -84,9 +98,10 @@
                     </td>
                 </tr>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
             }
+            </tbody>
         </table>
     </div>
-    <div id="cartfooter">
+    <div id="cartfooter" class="shade box">
         <div id="carttotals">                                                    
             <table border="0" cellspacing="0" cellpadding="3">
             @if (Model.CurrentOrder.OrderDiscountDetails.Count > 0)
@@ -116,26 +131,26 @@
             }
             </table>                                                                                
         </div>
-        <div id="EstimateShipping">
+        @*<div id="EstimateShipping">
             <a id="GetRatesLink" 
                onclick="JavaScript:window.open('@Url.Content("~/EstimateShipping")','Images','width=400, height=500, menubar=no, scrollbars=yes, resizable=yes, status=no, toolbar=no');" 
                style="cursor: pointer;">
                 <img src="@Model.EstimateShippingButtonUrl" alt="Estimate Shipping" />                            
             </a>
-        </div>
+        </div>*@
     </div>
     <div id="cartactions">
-        <div id="cartactioncontinue">
+        @*<div id="cartactioncontinue">
             <a href="@Html.Raw(Model.KeepShoppingUrl)" alt="Keep Shopping">
                 <img src="@Model.KeepShoppingButtonUrl" alt="Keep Shopping" /></a>
-        </div>
+        </div>*@
         <div id="cartactioncheckout" runat="server">
             <form action="@Url.Content("~/cart")" method="post">
-            <input type="image" src="@Model.CheckoutButtonUrl" alt="Secure Checkout" />
+            <input type="submit" class="button" value="Checkout" />
             </form>
             @if (Model.PayPalExpressAvailable)
             {                
-                <div class="paypalbuffer">- OR - </div>
+                <div class="paypalbuffer smalltext">OR</div>
                 <form action="@Url.Content("~/cart")" method="post" class="paypalexpresscheckoutform">
                     <input type="image" src="https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif" alt="PayPal Express Checkout" />
                     <input type="hidden" name="paypalexpress" value="true" />
@@ -143,25 +158,31 @@
             }
         </div>
     </div>
+    
     <div id="cartcoupons">
-        Add a Promotional Code:
-        <form action="@Url.Content("~/cart/addcoupon")" method="post">
-        <input type="text" name="couponcode" size="10" />
-        <input type="image" id="btnAddCoupon" src="@Model.AddCouponButtonUrl" alt="Add Coupon To Cart" />
-        </form>
-        <table>
-        @foreach (var coupon in Model.CurrentOrder.Coupons)
-        {
-            <tr>
-                <td>@coupon.CouponCode.ToUpperInvariant()</td>
-                <td>
-                    <form action="@Url.Content("~/cart/removecoupon")" method="post">
-                        <input type="image" src="@Model.DeleteButtonUrl" alt="Remove Coupon @coupon.CouponCode" />
-                        <input type="hidden" name="couponid" value="@coupon.Id" />
-                    </form>
-                </td>
-            </tr>
-        }
-        </table>
+        <a id="cartcoupons-expand" href="#">+ Apply a promo code</a>
+        <div id="cartcoupons-form" class="shade box">
+            <div>
+                <h4>Apply a Promotional Code</h4>
+                <form action="@Url.Content("~/cart/addcoupon")" method="post">
+                <input type="text" name="couponcode" class="forminput short" />
+                <input type="submit" id="btnAddCoupon" value="Apply" class="button" />
+                </form>
+                <table>
+                @foreach (var coupon in Model.CurrentOrder.Coupons)
+                {
+                    <tr>
+                        <td>@coupon.CouponCode.ToUpperInvariant()</td>
+                        <td>
+                            <form action="@Url.Content("~/cart/removecoupon")" method="post">
+                                <input type="image" src="@Model.DeleteButtonUrl" alt="Remove Coupon @coupon.CouponCode" />
+                                <input type="hidden" name="couponid" value="@coupon.Id" />
+                            </form>
+                        </td>
+                    </tr>
+                }
+                </table>
+            </div>
+        </div>
     </div>
 }

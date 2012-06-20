@@ -81,7 +81,7 @@
                 <span class="choice">
                     @if (Model.IsAvailableForSale)
                     {
-                        <input type="text" name="qty" value="@Model.InitialQuantity" class="forminput short" />
+                        <input type="text" name="qty" value="@Model.InitialQuantity" class="forminput short centered" />
                     }
                 </span>
                 <div id="localmessage">
@@ -90,7 +90,7 @@
                 <div class="buttons">
                     @if (Model.IsAvailableForSale)
                     {
-                        <input id="addtocartbutton" type="submit" value="Add To Cart" />
+                        <input id="addtocartbutton" type="submit" class="red button" value="Add To Cart" />
                         
                         if (Model.IsAvailableForWishList)
                         {
