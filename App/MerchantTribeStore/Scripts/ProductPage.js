@@ -45,7 +45,6 @@ $(document).ready(function () {
         EvaluateSelections();
         return true;
     });
-    EvaluateSelections();
 
 
     // AdditionalProductImage

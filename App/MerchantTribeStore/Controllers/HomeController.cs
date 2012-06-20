@@ -7,6 +7,7 @@ using MerchantTribe.Commerce;
 using MerchantTribe.Commerce.Catalog;
 using MerchantTribeStore.code.TemplateEngine;
 using MvcMiniProfiler;
+using Aurora.Customizations;
 
 namespace MerchantTribeStore.Controllers
 {
@@ -54,7 +55,7 @@ namespace MerchantTribeStore.Controllers
                 using (profiler.Step("Session Setup"))
                 {
                     SessionManager.CategoryLastId = string.Empty;
-                    ViewBag.Title = MTApp.CurrentStore.Settings.FriendlyName;
+                    ViewBag.Title = MTApp.CurrentStore.Settings.HomepageTitle();
                     ViewBag.BodyClass = "store-home-page";
                 }
                 using (profiler.Step("Load Template"))

@@ -34,6 +34,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MerchantTribe.Commerce.ApiS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MerchantTribe.Shipping.FedEx", "src\MerchantTribe.Shipping.FedEx\MerchantTribe.Shipping.FedEx.csproj", "{9B00258D-45D2-43BD-8178-A6F2AAFF5090}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aurora.Customizations", "src\Aurora.Customizations\Aurora.Customizations.csproj", "{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = BVCommerce.vsmdi
@@ -699,6 +701,48 @@ Global
 		{9B00258D-45D2-43BD-8178-A6F2AAFF5090}.Release-Source|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{9B00258D-45D2-43BD-8178-A6F2AAFF5090}.Release-Source|Mixed Platforms.Build.0 = Release|Any CPU
 		{9B00258D-45D2-43BD-8178-A6F2AAFF5090}.Release-Source|x86.ActiveCfg = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.CoreOnly|.NET.ActiveCfg = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.CoreOnly|Any CPU.ActiveCfg = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.CoreOnly|Any CPU.Build.0 = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.CoreOnly|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.CoreOnly|Mixed Platforms.Build.0 = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.CoreOnly|x86.ActiveCfg = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Publish|.NET.ActiveCfg = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Publish|Any CPU.ActiveCfg = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Publish|Any CPU.Build.0 = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Publish|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Publish|Mixed Platforms.Build.0 = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Publish|x86.ActiveCfg = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Release|.NET.ActiveCfg = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Release|x86.ActiveCfg = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Release-Hosted|.NET.ActiveCfg = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Release-Hosted|Any CPU.ActiveCfg = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Release-Hosted|Any CPU.Build.0 = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Release-Hosted|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Release-Hosted|Mixed Platforms.Build.0 = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Release-Hosted|x86.ActiveCfg = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Release-HostedStaging|.NET.ActiveCfg = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Release-HostedStaging|Any CPU.ActiveCfg = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Release-HostedStaging|Any CPU.Build.0 = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Release-HostedStaging|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Release-HostedStaging|Mixed Platforms.Build.0 = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Release-HostedStaging|x86.ActiveCfg = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Release-Source|.NET.ActiveCfg = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Release-Source|Any CPU.ActiveCfg = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Release-Source|Any CPU.Build.0 = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Release-Source|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Release-Source|Mixed Platforms.Build.0 = Release|Any CPU
+		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Release-Source|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

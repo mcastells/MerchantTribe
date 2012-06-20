@@ -4717,6 +4717,10 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\src\Aurora.Customizations\Aurora.Customizations.csproj">
+      <Project>{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}</Project>
+      <Name>Aurora.Customizations</Name>
+    </ProjectReference>
     <ProjectReference Include="..\src\MerchantTribe.Billing\MerchantTribe.Billing.csproj">
       <Project>{39CB3B9D-94B5-46B1-9C5F-E1C3348565D9}</Project>
       <Name>MerchantTribe.Billing</Name>

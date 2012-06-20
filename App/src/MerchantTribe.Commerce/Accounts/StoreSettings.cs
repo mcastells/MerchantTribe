@@ -92,7 +92,7 @@ namespace MerchantTribe.Commerce.Accounts
             }
         }
 
-        internal string GetProp(string name)
+        public string GetProp(string name)
         {
             StoreSetting s = GetSetting(name);
             return s.SettingValue;
