@@ -1,51 +1,9 @@
 ﻿@model MerchantTribeStore.Models.ProductPageViewModel
-<script type="text/javascript" src="/images/sites/1/themes/theme-aurora/templates/scripts/jquery.screwdefaultbuttons.min.js"></script>
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('#Size-S').screwDefaultButtons({
-            checked: "url(//cdn.illtee.com/forms/Size-S-checked.png)",
-            unchecked: "url(//cdn.illtee.com/forms/Size-S-unchecked.png)",
-            width: 47,
-            height: 44
-        });
-        $('#Size-M').screwDefaultButtons({
-            checked: "url(//cdn.illtee.com/forms/Size-M-checked.jpg)",
-            unchecked: "url(//cdn.illtee.com/forms/Size-M-unchecked.jpg)",
-            width: 52,
-            height: 44
-        });
-        $('#Size-L').screwDefaultButtons({
-            checked: "url(//cdn.illtee.com/forms/Size-L-checked.jpg)",
-            unchecked: "url(//cdn.illtee.com/forms/Size-L-unchecked.jpg)",
-            width: 48,
-            height: 44
-        });
-        $('#Size-XL').screwDefaultButtons({
-            checked: "url(//cdn.illtee.com/forms/Size-XL-checked.jpg)",
-            unchecked: "url(//cdn.illtee.com/forms/Size-XL-unchecked.jpg)",
-            width: 57,
-            height: 44
-        });
-        $('#Size-2X').screwDefaultButtons({
-            checked: "url(//cdn.illtee.com/forms/Size-XXL-checked.png)",
-            unchecked: "url(//cdn.illtee.com/forms/Size-XXL-unchecked.png)",
-            width: 71,
-            height: 44
-        });
+<link href="/images/sites/1/themes/theme-aurora/illuminatee-jqueryui-theme/jquery-ui-1.8.21.custom.css" rel="stylesheet" type="text/css" /><script type="text/javascript">
+    $(function () {
+        $(".radioSet").buttonset();
     });
 </script>
-<style type="text/css">
-    .styledRadio
-    {
-        /* Your styles here */
-        float: left;
-    }
-    
-    .styledCheckbox
-    {
-        /* Your styles here */
-    }
-</style>
 @Html.Action("Index", "ContentColumn", new { id = "Promo Banner" })
 <div id="productpage">
     @Html.Action("ProductTrail", "BreadCrumb", new { product = Model.LocalProduct })

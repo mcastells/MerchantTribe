@@ -20,6 +20,7 @@ namespace MerchantTribe.Commerce.Catalog.Options
         public string RenderWithSelection(Option baseOption, OptionSelectionList selections)
         {
             StringBuilder sb = new StringBuilder();
+            sb.Append("<div class=\"radioSet\">");
             foreach (OptionItem o in baseOption.Items)
             {
                 sb.Append("<input id=\"" + baseOption.Name + "-" + o.Name + "\" type=\"radio\" name=\"opt" + baseOption.Bvin.Replace("-", "") + "\" value=\"" + o.Bvin.Replace("-", "") + "\"");                
@@ -31,7 +32,10 @@ namespace MerchantTribe.Commerce.Catalog.Options
                 sb.Append("/>");
                 if (!String.Equals(baseOption.Name, "Size", StringComparison.InvariantCultureIgnoreCase))
                     sb.Append(o.Name);
+                else
+                    sb.Append("<label for=\"" + baseOption.Name + "-" + o.Name + "\">" + o.Name + "</label>");
             }
+            sb.Append("</div>");
             return sb.ToString();
         }
         private bool IsSelected(OptionItem item, OptionSelectionList selections)

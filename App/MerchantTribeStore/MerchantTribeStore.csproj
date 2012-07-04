@@ -916,6 +916,20 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Images\sites\1\themes\theme-aurora\ColumnData.xml" />
+    <Content Include="Images\sites\1\themes\theme-aurora\illuminatee-jqueryui-theme\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Images\sites\1\themes\theme-aurora\illuminatee-jqueryui-theme\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Images\sites\1\themes\theme-aurora\illuminatee-jqueryui-theme\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Images\sites\1\themes\theme-aurora\illuminatee-jqueryui-theme\images\ui-bg_glow-ball_50_4a7c82_600x600.png" />
+    <Content Include="Images\sites\1\themes\theme-aurora\illuminatee-jqueryui-theme\images\ui-bg_highlight-hard_75_acced2_1x100.png" />
+    <Content Include="Images\sites\1\themes\theme-aurora\illuminatee-jqueryui-theme\images\ui-bg_highlight-soft_75_b8d7db_1x100.png" />
+    <Content Include="Images\sites\1\themes\theme-aurora\illuminatee-jqueryui-theme\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Images\sites\1\themes\theme-aurora\illuminatee-jqueryui-theme\images\ui-bg_inset-soft_95_fef1ec_1x100.png" />
+    <Content Include="Images\sites\1\themes\theme-aurora\illuminatee-jqueryui-theme\images\ui-icons_222222_256x240.png" />
+    <Content Include="Images\sites\1\themes\theme-aurora\illuminatee-jqueryui-theme\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Images\sites\1\themes\theme-aurora\illuminatee-jqueryui-theme\images\ui-icons_454545_256x240.png" />
+    <Content Include="Images\sites\1\themes\theme-aurora\illuminatee-jqueryui-theme\images\ui-icons_888888_256x240.png" />
+    <Content Include="Images\sites\1\themes\theme-aurora\illuminatee-jqueryui-theme\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Images\sites\1\themes\theme-aurora\illuminatee-jqueryui-theme\jquery-ui-1.8.21.custom.css" />
     <Content Include="Images\sites\1\themes\theme-aurora\templates\inner-page.html" />
     <Content Include="Images\sites\1\themes\theme-aurora\templates\default-no-menu.html" />
     <Content Include="Images\sites\1\themes\theme-aurora\templates\default.html" />
