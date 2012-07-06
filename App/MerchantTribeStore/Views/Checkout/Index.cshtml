@@ -186,7 +186,7 @@
             @Html.Partial("_ViewOrderItems", Model.CurrentOrder.Items)
         </div>
 
-        <div id="totalsastable">
+        <div id="totalsastable" class="shade box">
             @Html.Raw(Model.CurrentOrder.TotalsAsTable())
         </div>
 

@@ -257,6 +257,7 @@ $(document).ready(function () {
         else
             $('.creditcardinput').slideUp('fast');
     });
-});                   // End Document Ready
-        
 
+    // sticky sidebar
+    $('#checkout-summary').stickySidebar({ speed: 0 });
+});
