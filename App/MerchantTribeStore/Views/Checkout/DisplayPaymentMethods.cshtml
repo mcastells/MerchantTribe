@@ -1,44 +1,62 @@
 ﻿@model MerchantTribeStore.Models.CheckoutViewModel
+@using MerchantTribe.Payment
 @{
     Layout = null;
 }
-
-<table border="0" cellspacing="0" cellpadding="3" width="100%">
-    @if (Model.PaymentViewModel.NoPaymentNeeded)
+@functions 
+{
+    public bool IsAccepted(CardType ctype)
     {
-        <tr>
-            <td valign="top" class="radiobuttoncol">
-                <input type="radio" value="nopayment" name="paymethod" checked="checked"/>
-           </td>
-            <td>@Model.PaymentViewModel.NoPaymentNeededDescription</td>
-        </tr>
-    }
+        if (Model.PaymentViewModel.AcceptedCardTypes.Contains(ctype))
+        {
+            return true;
+        }
+        return false;
+    }  
+}
+@if (Model.PaymentViewModel.NoPaymentNeeded)
+{
+    <input type="radio" value="nopayment" id="nopay-option" name="paymethod" checked="checked" />
+    <label for="nopay-option">@Model.PaymentViewModel.NoPaymentNeededDescription</label>
+}
+
+<div id="pay-options" class="form-section">
     @if (Model.PaymentViewModel.IsCreditCardActive)
     {
-        <tr>
-            <td valign="top" class="radiobuttoncol">
-                <input type="radio" value="creditcard" name="paymethod" 
+    
+        <input type="radio" value="creditcard" id="creditcard-option" name="paymethod" 
                 @if (Model.PaymentViewModel.SelectedPayment == "creditcard")
                 { <text>checked="checked"</text> }/>
-                </td>
-            <td>Credit Card
-                @Html.Partial("_CreditCardInput", Model)
-            </td>
-        </tr>
+        <label for="creditcard-option">
+            @if (IsAccepted(CardType.Visa))
+            { <span class="cc-visa"></span> }
+            @if (IsAccepted(CardType.MasterCard))
+            { <span class="cc-mastercard"></span> }
+            @if (IsAccepted(CardType.Amex))
+            { <span class="cc-amex"></span> }
+            @if (IsAccepted(CardType.Discover))
+            { <span class="cc-discover"></span> }
+            @if (IsAccepted(CardType.DinersClub))
+            { <span class="cc-diners"></span> }
+            @if (IsAccepted(CardType.JCB))
+            { <span class="cc-jcb"></span> }</label>
     }
     @if (Model.PaymentViewModel.IsPayPalActive)
     {
-        <tr>
-            <td valign="top" class="radiobuttoncol">
-                <input type="radio" value="paypal" name="paymethod" 
+        <input type="radio" value="paypal" id="paypal-option" name="paymethod" 
                 @if (Model.PaymentViewModel.SelectedPayment == "paypal")
-                { <text>checked="checked"</text> }/></td>
-            <td><img src="https://www.paypal.com/en_US/i/logo/PayPal_mark_37x23.gif" align="left" style="margin-right:7px;">
-            <span style="font-size:11px; font-family: Arial, Verdana;">Save time.  Checkout securely.<br /> 
-            Pay without sharing your financial information.</span></td>
-        </tr>
+                { <text>checked="checked"</text> }/>
+        <label for="paypal-option">
+            <img id="paypal-logo" src="https://www.paypal.com/en_US/i/logo/PayPal_mark_37x23.gif" alt="Pay with PayPal" /></label>
     }
-    @if (Model.PaymentViewModel.IsPurchaseOrderActive)
+    <div class="clear"></div>
+</div>
+
+@if (Model.PaymentViewModel.IsCreditCardActive)
+{
+    @Html.Partial("_CreditCardInput", Model)
+}
+@*@if (Model.PaymentViewModel.IsPurchaseOrderActive)
     {
         <tr>
             <td valign="top" class="radiobuttoncol">
@@ -93,5 +111,4 @@
                 { <text>checked="checked"</text> }/></td>
             <td>@Model.PaymentViewModel.CodDescription</td>
         </tr>
-    }
-</table>
+    }*@

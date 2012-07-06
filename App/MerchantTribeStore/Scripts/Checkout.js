@@ -65,7 +65,7 @@ function LoginAjax() {
                 $('#login-changing').hide();
                 $('#loginmessage').html('Ajax error. contact administrator').show();
             })
-            .complete(function () {$('#login-changing').hide(); });
+            .complete(function () { $('#login-changing').hide(); });
 
 }
 
@@ -204,7 +204,7 @@ function OpenDialog(lnk) {
 
 // Document Ready Function
 $(document).ready(function () {
-    
+
     BindStateDropDownLists();
 
     $('#chkbillsame').click(function () { CheckChanged(); return true; });
@@ -249,6 +249,14 @@ $(document).ready(function () {
     });
 
     CloseDialog();
-});              // End Document Ready
+
+    $('input[name="paymethod"]').change(function () {
+        var val = $(this).val();
+        if (val == 'creditcard')
+            $('.creditcardinput').slideDown('fast');
+        else
+            $('.creditcardinput').slideUp('fast');
+    });
+});                   // End Document Ready
         
 

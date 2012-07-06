@@ -42,7 +42,7 @@ h4 {font-size:20px;}
 .formfield { font-size: 18px; font-family: "ronnia", sans-serif; font-weight: 700; color: #ddd; }
 .smalltext {font-size:12px; font-family: "ronnia", sans-serif; font-weight: 800; color: #fff; text-transform: uppercase; }
 
-#productcontrols label, .Header, .rowheader, th { color: #fff; font-family: "ronnia", sans-serif; font-weight: 300; font-size: 14px; text-transform: uppercase; }
+label, .Header, .rowheader, th { color: #fff; font-family: "ronnia", sans-serif; font-weight: 300; font-size: 14px; text-transform: uppercase; }
 
 /* type colors */
 .typedisplay { color: #9fbcbf; }
@@ -53,6 +53,8 @@ p, .text, h1,h2,h3,h4,#productcontrols label, .Header, .rowheader, th { text-sha
 ul.tabnavigation { display: none; }
 
 /* forms */
+label {display:block;clear:both;margin:0 0 .5em 0;}
+
 input.forminput  
 {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f5f9fa), color-stop(1, #acced2) );
@@ -121,11 +123,11 @@ a:hover { color: #009aa2; }
 a, a:visited, a:hover {text-decoration: none; }
 
 /* basic elements */
-.shade, thead th, .Header, .rowheader
+.shade, table th, .Header, .rowheader
 {
 	background: rgba(0,0,0,0.2);
 }
-.shade.box, thead th, .Header, .rowheader
+.shade.box, table th, .Header, .rowheader
 {
 	padding: 1em;
 	margin-bottom: 1em;
@@ -313,7 +315,6 @@ ul.typedisplay { list-style: none; }
 #productpage .actioncolumn {float:right;width:460px;}
 #productpage .informationcolumn {clear:both;}
 #productpage .options {margin:10px 0;}
-#productcontrols label {display:block;clear:both;margin:0 0 5px 0;}
 #productcontrols .choice {display:block;}
 
 #productpage #ProductReviews {clear: both;}
@@ -686,6 +687,18 @@ h1 {color:#fff;}
 .checkout .first-name, .checkout .last-name { float: left; }
 .checkout .first-name { clear: both; }
 .checkout .last-name { margin-left: 1em; }
+
+#checkout-info { width: 600px; float: left; margin: 0 2em 2em 0; }
+
+#checkout-summary { width: 300px; float: left; }
+#checkout-summary table { width: 100%; }
+
+#pay-options input, #pay-options label { float: left; }
+#pay-options input { margin: 8px 1em; }
+#pay-options label { margin-right: 1.5em; }
+#paypal-logo { margin-top: 4px; }
+
+.creditcardinput { clear: both; }
 
 /* Column Blocks */
 .decoratedblock {}
