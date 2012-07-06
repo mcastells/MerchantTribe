@@ -10,17 +10,17 @@ namespace MerchantTribeStore
     partial class JQueryInclude : System.Web.UI.UserControl
     {
 
-        protected override void OnLoad(EventArgs e)
-        {
-            base.OnLoad(e);
-            BuildJQueryIncludes();
-        }
+        //protected override void OnLoad(EventArgs e)
+        //{
+        //    base.OnLoad(e);
+        //    BuildJQueryIncludes();
+        //}
 
-        private void BuildJQueryIncludes()
-        {
-            string baseScriptFolder = Page.ResolveUrl("~/scripts");
-            this.litJQuery.Text = Helpers.Html.JQueryIncludes(baseScriptFolder, Request.IsSecureConnection);            
-        }
+        //private void BuildJQueryIncludes()
+        //{
+        //    string baseScriptFolder = Page.ResolveUrl("~/scripts");
+        //    this.litJQuery.Text = Helpers.Html.JQueryIncludes(baseScriptFolder, Request.IsSecureConnection);            
+        //}
 
     }
 }

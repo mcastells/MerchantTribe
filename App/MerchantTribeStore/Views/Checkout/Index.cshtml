@@ -1,7 +1,7 @@
 ﻿@model MerchantTribeStore.Models.CheckoutViewModel
 @using MerchantTribeStore.Models;
 
-<style>
+<style type="text/css">
 #header-menu, #cart-link { display: none; }
 </style>
 
@@ -69,8 +69,7 @@
                 <div class="form-section">
                     <label for="customeremail">
                         Email</label>
-                    <input type="text" id="customeremail" name="customeremail" class="forminput"
-                tabindex="100" size="50" value="@Model.CurrentOrder.UserEmail" />
+                    <input type="text" id="customeremail" name="customeremail" class="forminput" tabindex="100" value="@Model.CurrentOrder.UserEmail" />
                 </div>
 
                 @Html.Partial("_CheckoutAddress", new CheckoutAddressViewModel()
@@ -172,8 +171,13 @@
                     <p>
                         <a href="@Url.Content("~/policies/terms")" class="viewSiteTerms">View @Model.LabelTerms</a></p>
                 }
-                
+                           
                 <input type="submit" id="btnsubmit" class="red button" value="Place your order!" />
+
+                <div id="trust-seals">
+                    <img src="https://s3.amazonaws.com/illtee-web/images/comodo_secure_100x85_transp.png" alt="Secure Purchase" />
+                </div>
+                <div class="clear"></div>
             </div>
 
             </form>

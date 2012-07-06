@@ -23,26 +23,26 @@
         <label>
             First name</label>
         <input type="text" id="@(Model.Prefix + "firstname")" name="@(Model.Prefix + "firstname")"
-                                        size="20" tabindex="@(Model.TabIndex + 2)"
+                                        tabindex="@(Model.TabIndex + 2)"
                                         value="@Model.Address.FirstName"
-                                        class="@Model.IsErr("firstname") forminput" />
+                                        class="@Model.IsErr("firstname") forminput medium" />
     </div>
 
     <div class="last-name">
         <label>
             Last name</label>
         <input type="text" id="@(Model.Prefix + "lastname")" name="@(Model.Prefix + "lastname")"
-                                        size="20" tabindex="@(Model.TabIndex + 3)"
+                                        tabindex="@(Model.TabIndex + 3)"
                                         value="@Model.Address.LastName"
-                                        class="@Model.IsErr("lastname") forminput" />
+                                        class="@Model.IsErr("lastname") forminput medium" />
     </div>
-
+    <div class="clear"></div>
 </div>
 
 @*<label>
     Company</label>
 <input type="text" id="@(Model.Prefix + "company")" name="@(Model.Prefix + "company")"
-                                        size="20" tabindex="@(Model.TabIndex + 4)"
+                                        tabindex="@(Model.TabIndex + 4)"
                                         value="@Model.Address.Company"
                                         class="@Model.IsErr("company") forminput" />*@
 
@@ -50,7 +50,7 @@
     <label>
         Address</label>
     <input type="text" id="@(Model.Prefix + "address")" name="@(Model.Prefix + "address")"
-                                       size="20" tabindex="@(Model.TabIndex + 5)"
+                                       tabindex="@(Model.TabIndex + 5)"
                                        value="@Model.Address.Line1"
                                        class="@Model.IsErr("address") forminput" />
 </div>
@@ -59,7 +59,7 @@
     <label>
         City</label>
     <input type="text" id="@(Model.Prefix + "city")" name="@(Model.Prefix + "city")"
-                                        size="20" tabindex="@(Model.TabIndex + 6)" 
+                                        tabindex="@(Model.TabIndex + 6)" 
                                         value="@Model.Address.City"
                                         class="@Model.IsErr("city") forminput" />
 </div>
@@ -75,9 +75,9 @@
     <label>
         Zip code</label>
     <input type="text" id="@(Model.Prefix + "zip")" name="@(Model.Prefix + "zip")" 
-                                        size="10" tabindex="@(Model.TabIndex + 8)"                                        
+                                        tabindex="@(Model.TabIndex + 8)"                                        
                                         value="@Model.Address.PostalCode" 
-                                        class="@Model.IsErr("zip") forminput" />
+                                        class="@Model.IsErr("zip") forminput short" />
 </div>
 
 <div class="form-section">
@@ -85,7 +85,7 @@
         Phone</label>
     <input type="text" id="@(Model.Prefix + "phone")" name="@(Model.Prefix + "phone")" 
                                         value="@Model.Address.Phone"
-                                        size="20" tabindex="@(Model.TabIndex + 9)"
+                                        tabindex="@(Model.TabIndex + 9)"
                                         class="@Model.IsErr("phone") forminput" />
 </div>
 

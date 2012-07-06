@@ -60,6 +60,8 @@ p, .text, h1,h2,h3,h4,#productcontrols label, .Header, .rowheader, th { text-sha
 
 ul.tabnavigation { display: none; }
 
+p { margin-bottom: 1em; }
+
 /* forms */
 label {display:block;clear:both;margin:0 0 .5em 0;}
 
@@ -77,8 +79,10 @@ input.forminput
 	text-shadow: -1px -1px 1px #c2d1d3; 
 	border: none;
 	padding: 8px 0;
+	width: 400px;
 }
 input.forminput.short { width: 65px; }
+input.forminput.medium { width: 190px; }
 
 /* buttons - thank you, CSSButtonGenerator.com */
 .button
@@ -700,19 +704,22 @@ h1 {color:#fff;}
 .checkout .form-section { margin-bottom: 1em; clear: both; }
 .checkout .first-name, .checkout .last-name { float: left; }
 .checkout .first-name { clear: both; }
-.checkout .last-name { margin-left: 1em; }
+.checkout .last-name { margin-left: 20px; }
 
 #checkout-info { width: 600px; float: left; margin: 0 2em 2em 0; }
 
 #checkout-summary { width: 300px; float: left; }
 #checkout-summary table { width: 100%; }
 
-#pay-options input, #pay-options label { float: left; }
+#pay-options input, #pay-options label { float: left; clear: none; }
 #pay-options input { margin: 8px 1em; }
 #pay-options label { margin-right: 1.5em; }
 #paypal-logo { margin-top: 4px; }
 
 .creditcardinput { clear: both; }
+
+.checkout #btnsubmit { float: left; }
+#trust-seals { float: right; }
 
 /* Column Blocks */
 .decoratedblock {}
