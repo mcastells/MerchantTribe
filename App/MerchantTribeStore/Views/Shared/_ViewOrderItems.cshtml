@@ -1,23 +1,16 @@
 ﻿@model IEnumerable<MerchantTribe.Commerce.Orders.LineItem>
-<table>
-    <tr>
-        <th>Item</th>
-        <th>Qty</th>
-        <th>Amount</th>
-    </tr>
+<table class="line-divide" cellspacing="0">
     @foreach (var item in Model)
     {
         <tr>
             <td>
 
-                @item.ProductName
+                @item.ProductName (@item.Quantity)
 
                 @if (item.LineTotal != item.LineTotalWithoutDiscounts)
                 {
                     <div class="discounts">@item.DiscountDetails</div>
                 }
-            </td>
-            <td align="center">@item.Quantity
             </td>
             <td align="right">
                 @if (item.LineTotal != item.LineTotalWithoutDiscounts)

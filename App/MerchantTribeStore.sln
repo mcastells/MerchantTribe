@@ -36,6 +36,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MerchantTribe.Shipping.FedE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aurora.Customizations", "src\Aurora.Customizations\Aurora.Customizations.csproj", "{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aurora.Web", "src\Aurora.Web\Aurora.Web.csproj", "{0099D089-1B85-4739-95C6-6B9FC8106024}"
+EndProject
 Global
 	GlobalSection(TestCaseManagementSettings) = postSolution
 		CategoryFile = BVCommerce.vsmdi
@@ -743,6 +745,48 @@ Global
 		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Release-Source|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Release-Source|Mixed Platforms.Build.0 = Release|Any CPU
 		{BBC3C212-A956-4B58-ADDD-EE35BCBFF35B}.Release-Source|x86.ActiveCfg = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.CoreOnly|.NET.ActiveCfg = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.CoreOnly|Any CPU.ActiveCfg = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.CoreOnly|Any CPU.Build.0 = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.CoreOnly|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.CoreOnly|Mixed Platforms.Build.0 = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.CoreOnly|x86.ActiveCfg = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Publish|.NET.ActiveCfg = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Publish|Any CPU.ActiveCfg = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Publish|Any CPU.Build.0 = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Publish|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Publish|Mixed Platforms.Build.0 = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Publish|x86.ActiveCfg = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Release|.NET.ActiveCfg = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Release|x86.ActiveCfg = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Release-Hosted|.NET.ActiveCfg = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Release-Hosted|Any CPU.ActiveCfg = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Release-Hosted|Any CPU.Build.0 = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Release-Hosted|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Release-Hosted|Mixed Platforms.Build.0 = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Release-Hosted|x86.ActiveCfg = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Release-HostedStaging|.NET.ActiveCfg = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Release-HostedStaging|Any CPU.ActiveCfg = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Release-HostedStaging|Any CPU.Build.0 = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Release-HostedStaging|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Release-HostedStaging|Mixed Platforms.Build.0 = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Release-HostedStaging|x86.ActiveCfg = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Release-Source|.NET.ActiveCfg = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Release-Source|Any CPU.ActiveCfg = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Release-Source|Any CPU.Build.0 = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Release-Source|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Release-Source|Mixed Platforms.Build.0 = Release|Any CPU
+		{0099D089-1B85-4739-95C6-6B9FC8106024}.Release-Source|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

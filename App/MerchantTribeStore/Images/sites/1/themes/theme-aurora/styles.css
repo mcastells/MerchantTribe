@@ -35,10 +35,10 @@ h1 {font-size:44px; font-weight: 300; line-height: 1em; }
 h2, a .cartproductname {font-size:28px;}
 h3 {font-size:25px;}
 h4 {font-size:20px;}
-.breadcrumbs { font-size: 16px; font-family: "ronnia", sans-serif; font-weight: 400;}
+.breadcrumbs { font-size: 16px; font-family: "ronnia", sans-serif; font-weight: 300;}
 .typedisplay .productpropertylabel { font-family: "corner-store"; }
 .typedisplay .productpropertyvalue { font-size: 18px; font-family: "ronnia", sans-serif; font-weight: 800; text-transform: uppercase; }
-.formlabel { font-size: 18px; font-family: "ronnia", sans-serif; font-weight: 400; color: #ddd; }
+.formlabel { font-size: 18px; font-family: "ronnia", sans-serif; font-weight: 300; color: #ddd; }
 .formfield { font-size: 18px; font-family: "ronnia", sans-serif; font-weight: 700; color: #ddd; }
 .smalltext {font-size:12px; font-family: "ronnia", sans-serif; font-weight: 800; color: #fff; text-transform: uppercase; }
 
@@ -150,6 +150,7 @@ a, a:visited, a:hover {text-decoration: none; }
 	margin-bottom: 1em;
 }
 
+table.line-divide td {border-bottom:solid 1px #3a3950; padding: 10px; vertical-align:top;}
 
 
 /* Wraps the entire site */
@@ -359,7 +360,6 @@ ul.typedisplay { list-style: none; }
 .cartitemimage {float:left; margin: 0 0 0 0;}
 .cartitemimage img {width:110px;}
 .cartitemdescription { margin: 5px;}
-#cartcontainer tr td {border-bottom:solid 1px #3a3950; padding: 10px; vertical-align:top;}
 #cartcontainer, #cartactions, #cartcoupons {margin: 0;}
 td.productquantitycolumn { text-align: center; width: 10%; }
 td.producttotalcolumn, td.productpricecolumn { text-align: center; width: 10%;}

@@ -1,8 +1,10 @@
 ﻿@model MerchantTribeStore.Models.CheckoutViewModel
 @using MerchantTribeStore.Models;
-
 <style type="text/css">
-#header-menu, #cart-link { display: none; }
+    #header-menu, #cart-link
+    {
+        display: none;
+    }
 </style>
 
 <div class="checkout">
@@ -59,12 +61,10 @@
                     </table>                    
                 }
             </div>*@
-
             <h2>
-                    Shipping Info</h2>
+                Shipping Info</h2>
 
             <div class="section-shipping shade box">
-                
 
                 <div class="form-section">
                     <label for="customeremail">
@@ -85,10 +85,9 @@
             </div>
 
             <h2>
-                    Shipping Options</h2>
+                Shipping Options</h2>
 
-            <div class="section-delivery shade box">
-                
+            <div class="section-delivery shade box text">
 
                 <div id="lstShipping">
                 </div>
@@ -106,13 +105,12 @@
             </div>
 
             <h2>
-                    Billing Info</h2>
+                Billing Info</h2>
 
             <div class="section-billing shade box">
-                
                 <input type="checkbox" id="chkbillsame" name="chkbillsame" @if (Model.BillShipSame)
                                                                            { <text> checked="checked"</text> } tabindex="400" />
-                My billing address is the same as my shipping address
+                <span class="text">My billing address is the same as my shipping address</span>
 
                 <div id="billingwrapper">
                     @Html.Partial("_CheckoutAddress", new CheckoutAddressViewModel()
@@ -146,12 +144,10 @@
 
                 </div>
             }
-
             <h2>
-                    Payment Info</h2>
+                Payment Info</h2>
 
             <div class="section-payment shade box">
-                
                 @Html.Partial("DisplayPaymentMethods", Model)
             </div>
 
@@ -171,13 +167,16 @@
                     <p>
                         <a href="@Url.Content("~/policies/terms")" class="viewSiteTerms">View @Model.LabelTerms</a></p>
                 }
-                           
                 <input type="submit" id="btnsubmit" class="red button" value="Place your order!" />
 
                 <div id="trust-seals">
-                    <img src="https://s3.amazonaws.com/illtee-web/images/comodo_secure_100x85_transp.png" alt="Secure Purchase" />
+                    <img src="https://s3.amazonaws.com/illtee-web/images/comodo_secure_100x85_transp.png"
+                        alt="Secure Purchase" />
                 </div>
-                <div class="clear"></div>
+
+                <div class="clear">
+                </div>
+
             </div>
 
             </form>
@@ -190,12 +189,13 @@
         <h2>
             Order Summary</h2>
 
-        <div class="section-cart">
+        <div class="section-cart shade box text">
             @Html.Partial("_ViewOrderItems", Model.CurrentOrder.Items)
-        </div>
 
-        <div id="totalsastable" class="shade box">
-            @Html.Raw(Model.CurrentOrder.TotalsAsTable())
+            <div id="totalsastable">
+                @Html.Raw(Model.CurrentOrder.TotalsAsTable())
+            </div>
+
         </div>
 
         @*<table id="totalsastable">
