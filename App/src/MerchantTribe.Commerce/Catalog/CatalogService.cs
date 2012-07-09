@@ -802,7 +802,7 @@ namespace MerchantTribe.Commerce.Catalog
                     else
                     {
                         result.IsInStock = true;
-                        result.InventoryMessage = "In Stock (" + result.Qty.ToString() + ")";
+                        result.InventoryMessage = (result.Qty < Properties.Settings.Default.InventoryDisplayQtyThreshold ?  "Only " + result.Qty.ToString() + " left" : "In stock");
                         result.IsAvailableForSale = true;
                     }
                     break;
@@ -816,7 +816,7 @@ namespace MerchantTribe.Commerce.Catalog
                     else
                     {
                         result.IsInStock = true;
-                        result.InventoryMessage = "In Stock (" + result.Qty.ToString() + ")";
+                        result.InventoryMessage = (result.Qty < Properties.Settings.Default.InventoryDisplayQtyThreshold ? "Only " + result.Qty.ToString() + " left" : "In stock");
                         result.IsAvailableForSale = true;
                     }
                     break;
@@ -830,7 +830,7 @@ namespace MerchantTribe.Commerce.Catalog
                     else
                     {
                         result.IsInStock = true;
-                        result.InventoryMessage = "In Stock (" + result.Qty.ToString() + ")";
+                        result.InventoryMessage = (result.Qty < Properties.Settings.Default.InventoryDisplayQtyThreshold ? "Only " + result.Qty.ToString() + " left" : "In stock");
                         result.IsAvailableForSale = true;
                     }
                     break;

@@ -524,7 +524,7 @@ namespace MerchantTribeStore.Controllers
                     }
                     else
                     {
-                        model.ValidationMessage = "<div class=\"flash-message-warning\">The options you've selected aren't available at the moment. Please select different options.</div>";
+                        model.ValidationMessage = "<div class=\"flash-message-warning\">Please select a size</div>";
                     }
                 }
                 else
@@ -584,7 +584,7 @@ namespace MerchantTribeStore.Controllers
                 }
                 else
                 {
-                    result.Message = "<div class=\"flash-message-warning\">The combination of options you've selected isn't available at the moment. Please select different options.</div>";
+                    result.Message = "<div class=\"flash-message-warning\">Please select a size</div>";
                 }
                 if (price.VariantId.Length > 0)
                 {

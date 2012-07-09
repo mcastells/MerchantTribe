@@ -26,5 +26,8 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=.;Initial Catalog=commerce6;Persist Security Info=True;User ID=commercehosted;Password=commercehosted</Value>
     </Setting>
+    <Setting Name="InventoryDisplayQtyThreshold" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

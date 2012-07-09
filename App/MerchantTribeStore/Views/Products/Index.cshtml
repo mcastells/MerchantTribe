@@ -1,5 +1,7 @@
 ﻿@model MerchantTribeStore.Models.ProductPageViewModel
-<link href="/images/sites/1/themes/theme-aurora/illuminatee-jqueryui-theme/jquery-ui-1.8.21.custom.css" rel="stylesheet" type="text/css" /><script type="text/javascript">
+<link href="/images/sites/1/themes/theme-aurora/illuminatee-jqueryui-theme/jquery-ui-1.8.21.custom.css"
+    rel="stylesheet" type="text/css" />
+<script type="text/javascript">
     $(function () {
         $(".radioSet").buttonset();
     });
@@ -19,22 +21,19 @@
         <div class="actioncolumn">
             <h1 itemprop="name">
                 @Model.LocalProduct.ProductName</h1>
-
             <div id="pricewrapper">@Html.Raw(Model.PreRenderedPrices)</div>
-            
-            <div class="clear"></div>
-
+            <div class="clear">
+            </div>
             @Html.Raw((string)TempData["messages"])
-            
             @*<span id="sku" itemprop="productID">@Model.LocalProduct.Sku</span>*@
-            
             <div id="productcontrols">
-
+                @Html.Raw(Model.PreRenderedTypeValues)
+                <div id="productdescription" name="productdescription" itemprop="description">
+                    @Html.Raw(Model.LocalProduct.LongDescription)
+                </div>
                 <form action="@Url.Content("~/" + Model.LocalProduct.UrlSlug)" method="post">
-                
                 @Html.Raw(Model.PreRenderedOptions)
                 <span class="stockdisplay">@Html.Raw(Model.StockMessage)</span>
-
                 <label for="quantityfield">
                     How many?</label>
                 <span class="choice">
@@ -43,9 +42,6 @@
                         <input type="text" name="qty" value="@Model.InitialQuantity" class="forminput short centered" />
                     }
                 </span>
-                <div id="localmessage">
-                    @Html.Raw(Model.ValidationMessage)
-                </div>
                 <div class="buttons">
                     @if (Model.IsAvailableForSale)
                     {
@@ -57,14 +53,11 @@
                         &nbsp;<br /></text>
                         <input id="savelaterbutton" name="savelaterbutton" type="image" src="@ViewBag.SaveLaterButton" alt="Save For Later" value="SaveLater" />
                         }
+                        <div id="localmessage">
+                            @Html.Raw(Model.ValidationMessage)
+                        </div>
                     }
                 </div>
-                @Html.Raw(Model.PreRenderedTypeValues)
-
-                <div name="productdescription" itemprop="description">
-                    @Html.Raw(Model.LocalProduct.LongDescription)
-                </div>
-
                 @if (ViewBag.UseFaceBook == true)
                 {
                     
@@ -96,13 +89,13 @@
                 <input type="hidden" id="productbvin" name="productbvin" value="@Model.LocalProduct.Bvin" />
                 <input type="hidden" id="lineitemid" name="lineitemid" value="@Model.LineItemId" />
                 <!--VOLUME DISCOUNTS HERE-->
-                <div class="clear"></div>
+                <div class="clear">
+                </div>
                 </form>
-
             </div>
-            
         </div>
-        <div class="clear">&nbsp;</div>
+        <div class="clear">
+            &nbsp;</div>
     </div>
     <div class="informationcolumn">
         <ul class="tabnavigation">
@@ -119,76 +112,81 @@
         <div class="tabs">
             @if (Model.LocalProduct.AllowReviews)
             {
-            <div id="tabreviews">
-                <div class="padded">
-                    <h2>
-                        Reviews</h2>
-                    <div class="reviews">
-                        <div class="reviewlist">
-                            @Html.Action("TopReviews", "ProductReviews", new { howMany = 3, reviews = Model.LocalProduct.ReviewsApproved })
-                            @if (Model.LocalProduct.Reviews.Count > 0)
-                            {
-                                <div class="ProductReviewLinks"><a href="@Url.Content("~/Products/Reviews/" + Model.LocalProduct.UrlSlug)">
-                                    View All Reviews</a><br />
-                                </div>
-                            }
+                <div id="tabreviews">
+                    <div class="padded">
+                        <h2>
+                            Reviews</h2>
+                        <div class="reviews">
+                            <div class="reviewlist">
+                                @Html.Action("TopReviews", "ProductReviews", new { howMany = 3, reviews = Model.LocalProduct.ReviewsApproved })
+                                @if (Model.LocalProduct.Reviews.Count > 0)
+                                {
+                                    <div class="ProductReviewLinks">
+                                        <a href="@Url.Content("~/Products/Reviews/" + Model.LocalProduct.UrlSlug)">View All
+                                            Reviews</a><br />
+                                    </div>
+                                }
+                            </div>
+                            <div class="reviewform">
+                                @if (Model.LocalProduct.AllowReviews)
+                                {                            
+                                    <h3>
+                                        Write a Review for this Product</h3>
+                                    <div id="submitreviewmessage">
+                                    </div>
+                                    <form action="@Url.Content("~/productreviews/create")" method="post" id="submitreviewform">
+                                    <table class="formtable">
+                                        <tr>
+                                            <td class="formlabel" valign="top" align="right">
+                                                Rating
+                                            </td>
+                                            <td>
+                                                <select name="rating">
+                                                    <option value="5" selected="selected">5 Stars</option>
+                                                    <option value="4">4 Stars</option>
+                                                    <option value="3">3 Stars</option>
+                                                    <option value="2">2 Stars</option>
+                                                    <option value="1">1 Star</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="formlabel" valign="top" align="right">
+                                                Your Review
+                                            </td>
+                                            <td>
+                                                <textarea name="newreview" class="forminput" rows="6" cols="30"></textarea>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="formlabel">
+                                                &nbsp;
+                                            </td>
+                                            <td>
+                                                <input type="image" src="@ViewBag.SubmitButtonUrl" alt="Submit" id="submitreviewbutton" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <input type="hidden" name="productbvin" value="@Model.LocalProduct.Bvin" />
+                                    </form>
+                                }
+                            </div>
+                            <div class="clear">
+                            </div>
                         </div>
-                        <div class="reviewform">
-                            @if (Model.LocalProduct.AllowReviews)
-                            {                            
-                                <h3>
-                                    Write a Review for this Product</h3>
-                                <div id="submitreviewmessage"></div>
-                                <form action="@Url.Content("~/productreviews/create")" method="post" id="submitreviewform">
-                                <table class="formtable">
-                                    <tr>
-                                        <td class="formlabel" valign="top" align="right">
-                                            Rating
-                                        </td>
-                                        <td>
-                                            <select name="rating">
-                                                <option value="5" selected="selected">5 Stars</option>
-                                                <option value="4">4 Stars</option>
-                                                <option value="3">3 Stars</option>
-                                                <option value="2">2 Stars</option>
-                                                <option value="1">1 Star</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="formlabel" valign="top" align="right">
-                                            Your Review
-                                        </td>
-                                        <td>
-                                            <textarea name="newreview" class="forminput" rows="6" cols="30"></textarea>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="formlabel">
-                                            &nbsp;
-                                        </td>
-                                        <td>
-                                            <input type="image" src="@ViewBag.SubmitButtonUrl" alt="Submit" id="submitreviewbutton" />
-                                        </td>
-                                    </tr>
-                                </table>
-                                <input type="hidden" name="productbvin" value="@Model.LocalProduct.Bvin" />
-                                </form>
-                            }
-                        </div>
-                        <div class="clear"></div>
                     </div>
                 </div>
-            </div>
             }
             <div id="tabsuggesteditems">
-                <div class="padded"><h2>@ViewBag.RelatedItemsTitle</h2>
+                <div class="padded">
+                    <h2>@ViewBag.RelatedItemsTitle</h2>
                     <div class="relateditems">
                         @foreach (var item in Model.RelatedItems)
                         {
                             @Html.Partial("RenderSingleProduct", item);
                         }
-                        <div class="clear"></div>
+                        <div class="clear">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -206,8 +204,10 @@
     @Html.Action("Index", "ContentColumn", new { id = Model.LocalProduct.PostContentColumnId })
 </div>
 <div class="modal2">
-    <div class="popoverframe2"><a id="dialogclose" href="#">Close</a><br />
+    <div class="popoverframe2">
+        <a id="dialogclose" href="#">Close</a><br />
         <iframe id="popoverpage2"></iframe>
         <br />
-        <a id="dialogclose2" href="#">Close</a> </div>
+        <a id="dialogclose2" href="#">Close</a>
+    </div>
 </div>

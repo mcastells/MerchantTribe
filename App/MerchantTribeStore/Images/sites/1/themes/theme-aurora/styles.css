@@ -43,9 +43,17 @@ h4 {font-size:20px;}
 .smalltext {font-size:12px; font-family: "ronnia", sans-serif; font-weight: 800; color: #fff; text-transform: uppercase; }
 
 label, .Header, .rowheader, th { color: #fff; font-family: "ronnia", sans-serif; font-weight: 300; font-size: 14px; text-transform: uppercase; }
+.stockdisplay {
+color: #dd3838;
+font-family: "ronnia", sans-serif;
+font-weight: 300;
+font-size: 13px;
+display: block;
+margin: 0px 0px 15px 0px;
+}
 
 /* type colors */
-.typedisplay { color: #9fbcbf; }
+.typedisplay { color: #9fbcbf; margin-bottom: 25px; }
 
 /* shadows */
 p, .text, h1,h2,h3,h4,#productcontrols label, .Header, .rowheader, th { text-shadow: 1px 1px 1px #111; }
@@ -114,6 +122,11 @@ input.forminput.short { width: 65px; }
 	background:-moz-linear-gradient( center top, #ef4040 5%, #ff7878 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ef4040', endColorstr='#ff7878');
 	background-color:#ef4040;
+}
+
+#addtocartbutton
+{
+    float: left;
 }
 
 
@@ -185,7 +198,7 @@ a, a:visited, a:hover {text-decoration: none; }
 .flash-message-info {background-color: #CFF;	border-color: #3CF;}
 .flash-message-success {background-color: #DFFFDF;border-color: #3C3;} 
 .flash-message-failure {background-color: #C10000;border-color: #C10000;color: #ff0;}
-.flash-message-warning {background-color: #fffed7;border-color: #B3B300;}
+.flash-message-warning {background-color: #FFF151;border-color: #000;-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;font-size: 14px;font-family: "ronnia";font-weight: 700;display:inline-block;margin:6px 0px 0px 6px;}
 
 .curved {-moz-border-radius:10px;-webkit-border-radius:10px;border-radius:10px;}
 
@@ -271,7 +284,7 @@ a, a:visited, a:hover {text-decoration: none; }
 
 /* ------ Product Pages ------ */
 
-#productpage h1 { float: left; }
+#productpage h1 { float: left; max-width: 360px; margin-bottom: 20px; }
 
 /* price sticker yellow */
 #pricewrapper { float: left; margin-left: 20px;}
@@ -319,6 +332,7 @@ ul.typedisplay { list-style: none; }
 
 #productpage #ProductReviews {clear: both;}
 .productimage {margin: 0px 0; }
+#productdescription {margin-bottom: 30px;}
 
 /* Product Controls Box */
 .productpropertylabel { padding-right: 5px; text-decoration: none; }
@@ -791,8 +805,8 @@ ul.tabnavigation li a
 {
 	position: absolute;
 	width: 251px;
-	height: 43px;
-	padding: 15px 12px 12px 12px;
+	height: 46px;
+	padding: 12px;
 	top: 277px;
 	left: 0px;
 	background-color: #ffea00;
