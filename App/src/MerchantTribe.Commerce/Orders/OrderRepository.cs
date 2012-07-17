@@ -110,7 +110,7 @@ namespace MerchantTribe.Commerce.Orders
             data.GrandTotal = model.TotalGrand;
             data.HandlingTotal = model.TotalHandling;
             data.Id = model.Id;
-            data.Instructions = model.Instructions;
+            data.Instructions = model.Instructions ?? string.Empty; // instructions throws an error if null
             data.IsPlaced = model.IsPlaced ? 1 : 0;
             data.LastUpdated = model.LastUpdatedUtc;
             data.OrderDiscountDetails = Marketing.DiscountDetail.ListToXml(model.OrderDiscountDetails);
