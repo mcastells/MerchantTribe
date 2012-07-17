@@ -48,6 +48,7 @@
     <WarningLevel>4</WarningLevel>
     <PackageAsSingleFile>true</PackageAsSingleFile>
     <DesktopBuildPackageLocation>..\..\Packages\Release\MerchantTribeStore.zip</DesktopBuildPackageLocation>
+    <PublishDatabases>false</PublishDatabases>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release-Hosted|AnyCPU'">
     <OutputPath>bin\</OutputPath>
@@ -820,39 +821,6 @@
     <Content Include="content\themes\theme-bv-stoneslate\buttons\SaveForLater.png" />
     <Content Include="content\themes\theme-bv-summerstore\buttons\PrintThisPage.png" />
     <Content Include="content\themes\theme-bv-summerstore\buttons\SaveForLater.png" />
-    <Content Include="Images\sites\1\products\1e727ef2-7b67-44b8-9fa4-d2a7a9307c3b\break-science-2.jpg" />
-    <Content Include="Images\sites\1\products\1e727ef2-7b67-44b8-9fa4-d2a7a9307c3b\medium\break-science-2.jpg" />
-    <Content Include="Images\sites\1\products\1e727ef2-7b67-44b8-9fa4-d2a7a9307c3b\medium\triangles.png" />
-    <Content Include="Images\sites\1\products\1e727ef2-7b67-44b8-9fa4-d2a7a9307c3b\small\break-science-2-smaller.jpg" />
-    <Content Include="Images\sites\1\products\1e727ef2-7b67-44b8-9fa4-d2a7a9307c3b\small\break-science-2.jpg" />
-    <Content Include="Images\sites\1\products\1e727ef2-7b67-44b8-9fa4-d2a7a9307c3b\small\triangles.png" />
-    <Content Include="Images\sites\1\products\1e727ef2-7b67-44b8-9fa4-d2a7a9307c3b\triangles.png" />
-    <Content Include="Images\sites\1\products\4ec28c6a-a610-4fd5-a882-811b470922fd\CIMG0309.JPG" />
-    <Content Include="Images\sites\1\products\4ec28c6a-a610-4fd5-a882-811b470922fd\CIMG0309.png" />
-    <Content Include="Images\sites\1\products\4ec28c6a-a610-4fd5-a882-811b470922fd\medium\CIMG0309.JPG" />
-    <Content Include="Images\sites\1\products\4ec28c6a-a610-4fd5-a882-811b470922fd\medium\CIMG0309.png" />
-    <Content Include="Images\sites\1\products\4ec28c6a-a610-4fd5-a882-811b470922fd\small\CIMG0309.JPG" />
-    <Content Include="Images\sites\1\products\4ec28c6a-a610-4fd5-a882-811b470922fd\small\CIMG0309.png" />
-    <Content Include="Images\sites\1\products\5e94899b-cd99-4e25-b894-8a494f39785d\illtee-telephone-pole-bied-GLOW-design-1-copy.jpg" />
-    <Content Include="Images\sites\1\products\5e94899b-cd99-4e25-b894-8a494f39785d\medium\illtee-telephone-pole-bied-GLOW-design-1-copy.jpg" />
-    <Content Include="Images\sites\1\products\5e94899b-cd99-4e25-b894-8a494f39785d\medium\trippy-owl.PNG" />
-    <Content Include="Images\sites\1\products\5e94899b-cd99-4e25-b894-8a494f39785d\small\illtee-telephone-pole-bied-GLOW-design-1-copy.jpg" />
-    <Content Include="Images\sites\1\products\5e94899b-cd99-4e25-b894-8a494f39785d\small\triangles.png" />
-    <Content Include="Images\sites\1\products\5e94899b-cd99-4e25-b894-8a494f39785d\small\trippy-owl.PNG" />
-    <Content Include="Images\sites\1\products\5e94899b-cd99-4e25-b894-8a494f39785d\trippy-owl.PNG" />
-    <Content Include="Images\sites\1\products\a52d7b89-005f-4a78-9e3f-79857691e86d\illtee-telephone-pole-bied-GLOW-design-1-copy.jpg" />
-    <Content Include="Images\sites\1\products\a52d7b89-005f-4a78-9e3f-79857691e86d\medium\illtee-telephone-pole-bied-GLOW-design-1-copy.jpg" />
-    <Content Include="Images\sites\1\products\a52d7b89-005f-4a78-9e3f-79857691e86d\medium\zach-katz-design-1-copy-TREE-1.jpg" />
-    <Content Include="Images\sites\1\products\a52d7b89-005f-4a78-9e3f-79857691e86d\small\illtee-telephone-pole-bied-GLOW-design-1-copy.jpg" />
-    <Content Include="Images\sites\1\products\a52d7b89-005f-4a78-9e3f-79857691e86d\small\zach-katz-design-1-copy-TREE-1.jpg" />
-    <Content Include="Images\sites\1\products\a52d7b89-005f-4a78-9e3f-79857691e86d\zach-katz-design-1-copy-TREE-1.jpg" />
-    <Content Include="Images\sites\1\products\cbf6c6bc-c352-4daa-823a-6bf50d4dd05e\CIMG0311.JPG" />
-    <Content Include="Images\sites\1\products\cbf6c6bc-c352-4daa-823a-6bf50d4dd05e\CIMG0311.png" />
-    <Content Include="Images\sites\1\products\cbf6c6bc-c352-4daa-823a-6bf50d4dd05e\medium\CIMG0311.JPG" />
-    <Content Include="Images\sites\1\products\cbf6c6bc-c352-4daa-823a-6bf50d4dd05e\medium\CIMG0311.png" />
-    <Content Include="Images\sites\1\products\cbf6c6bc-c352-4daa-823a-6bf50d4dd05e\small\CIMG0311.JPG" />
-    <Content Include="Images\sites\1\products\cbf6c6bc-c352-4daa-823a-6bf50d4dd05e\small\CIMG0311.png" />
-    <Content Include="Images\sites\1\products\cbf6c6bc-c352-4daa-823a-6bf50d4dd05e\small\pinchlight.png" />
     <Content Include="Images\sites\1\themes\theme-aurora\buttons\addtocart.png" />
     <Content Include="Images\sites\1\themes\theme-aurora\buttons\CreateAccount.png" />
     <Content Include="Images\sites\1\themes\theme-aurora\buttons\Download.png" />

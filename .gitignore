@@ -26,3 +26,4 @@ Packages/
 *.7z
 web.debug.config
 web.release.config
+/App/MerchantTribeStore/Images/sites/1/products
