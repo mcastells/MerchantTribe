@@ -27,10 +27,6 @@
             @Html.Raw((string)TempData["messages"])
             @*<span id="sku" itemprop="productID">@Model.LocalProduct.Sku</span>*@
             <div id="productcontrols">
-                @Html.Raw(Model.PreRenderedTypeValues)
-                <div id="productdescription" name="productdescription" itemprop="description">
-                    @Html.Raw(Model.LocalProduct.LongDescription)
-                </div>
                 <form action="@Url.Content("~/" + Model.LocalProduct.UrlSlug)" method="post">
                 @Html.Raw(Model.PreRenderedOptions)
                 <span class="stockdisplay">@Html.Raw(Model.StockMessage)</span>
@@ -57,6 +53,12 @@
                             @Html.Raw(Model.ValidationMessage)
                         </div>
                     }
+                    <div class="clear"></div>
+                </div>
+                
+                @Html.Raw(Model.PreRenderedTypeValues)
+                <div id="productdescription" name="productdescription" itemprop="description">
+                    @Html.Raw(Model.LocalProduct.LongDescription)
                 </div>
                 @if (ViewBag.UseFaceBook == true)
                 {

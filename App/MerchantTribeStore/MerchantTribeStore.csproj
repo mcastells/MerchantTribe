@@ -4688,9 +4688,6 @@
     <Content Include="Views\FlexPage\EditorPanel.cshtml" />
     <Content Include="Views\FlexPage\EditorPopup.cshtml" />
     <Content Include="Views\SuperStores\Destroy.cshtml" />
-    <Content Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

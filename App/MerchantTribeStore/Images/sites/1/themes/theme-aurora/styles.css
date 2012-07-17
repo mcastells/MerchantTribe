@@ -343,7 +343,7 @@ ul.typedisplay { list-style: none; }
 .productpropertylabel { padding-right: 5px; text-decoration: none; }
 .listprice, .ListPrice {text-decoration: line-through; color:#999;}
 .yousave, .YouSave {color:#666;}
-#productcontrols .buttons {clear:both;margin:40px 0}
+#productcontrols .buttons {clear:both;margin:1.5em 0}
 #buttons input { margin: 5px; }
 #wishlist { margin-top: 5px; }
 
