@@ -8,10 +8,16 @@
 </script>
 @Html.Action("Index", "ContentColumn", new { id = "Promo Banner" })
 <div id="productpage">
-    @Html.Action("ProductTrail", "BreadCrumb", new { product = Model.LocalProduct })
+    @*@Html.Action("ProductTrail", "BreadCrumb", new { product = Model.LocalProduct })*@
     @Html.Action("Index", "ContentColumn", new { id = Model.LocalProduct.PreContentColumnId })
     <div class="productpagemain">
         <div class="imagecolumn">
+            @*@if (Model.LocalProduct.Images.Count > 0)
+            {
+                var img = Model.LocalProduct.Images.First();
+                <img itemprop="image" id="imgMain" src="@Model.LocalProduct" alt="@img.AlternateText" />
+            }*@
+
             <div class="productimage">
                 <img itemprop="image" id="imgMain" src="@Model.MainImageUrl" alt="@Model.MainImageAltText" />
                 <input type="hidden" id="imgMainLast" value="" />

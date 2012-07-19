@@ -16,10 +16,10 @@ namespace MerchantTribeStore.Controllers
 {
     public class ProductsController : BaseStoreController
     {
-        
+
         //GET: /{*slug}
         public ActionResult Index(string slug)
-        {   
+        {
             // Basic Setup
             ProductPageViewModel model = IndexSetup(slug);
 
@@ -28,7 +28,7 @@ namespace MerchantTribeStore.Controllers
 
             // Render Options
             model.PreRenderedOptions = HtmlRendering.ProductOptions(model.LocalProduct.Options, model.Selections);
-            
+
             // Record and Return view
             PersonalizationServices.RecordProductViews(model.LocalProduct.Bvin, MTApp);
             return View(model);
@@ -53,7 +53,7 @@ namespace MerchantTribeStore.Controllers
             if (Request.Form["savelaterbutton.x"] != null)
             {
                 // Save for Later
-                MTApp.CatalogServices.SaveProductToWishList(model.LocalProduct, model.Selections,1,  MTApp);
+                MTApp.CatalogServices.SaveProductToWishList(model.LocalProduct, model.Selections, 1, MTApp);
                 return Redirect("~/account/saveditems");
             }
             else
@@ -92,11 +92,11 @@ namespace MerchantTribeStore.Controllers
                     }
                 }
             }
-            
+
 
             // Load Selections from form here
             // Do checks and add
-            model.PreRenderedOptions = HtmlRendering.ProductOptions(model.LocalProduct.Options, model.Selections);            
+            model.PreRenderedOptions = HtmlRendering.ProductOptions(model.LocalProduct.Options, model.Selections);
 
             return View(model);
         }
@@ -140,7 +140,11 @@ namespace MerchantTribeStore.Controllers
 
             CheckForBackOrder(model);
 
-            model.MainImageUrl = MerchantTribe.Commerce.Storage.DiskStorage.ProductImageUrlMedium(MTApp, model.LocalProduct.Bvin, model.LocalProduct.ImageFileSmall, Request.IsSecureConnection);
+            model.MainImageUrl = MerchantTribe.Commerce.Storage.DiskStorage.ProductAdditionalImageUrlMedium(MTApp, model.LocalProduct.Bvin, 
+                model.LocalProduct.Images.First() == null ? string.Empty : model.LocalProduct.Images.First().Bvin,
+                model.LocalProduct.Images.First().FileName,
+                Request.IsSecureConnection);
+
             model.MainImageAltText = model.LocalProduct.ImageFileSmallAlternateText;
             model.PreRenderedTypeValues = model.LocalProduct.GetTypeProperties(this.MTApp);
 
@@ -242,7 +246,7 @@ namespace MerchantTribeStore.Controllers
 
             StringBuilder sb = new StringBuilder();
             sb.Append("<script type=\"text/javascript\">");
-                                    
+
             // Evaluate Selections
             sb.Append("function EvaluateSelections() {" + System.Environment.NewLine);
             sb.Append(" var loadingUrl = '" + Url.Content("~/images/system/ajax-loader.gif") + "';" + System.Environment.NewLine);
@@ -252,7 +256,7 @@ namespace MerchantTribeStore.Controllers
             sb.Append(" $('.buttons').hide();" + System.Environment.NewLine);
             sb.Append(" $('#localmessage').html('<label>&nbsp;</label><span class=\"choice\">' + loadingTag + '</span>');" + System.Environment.NewLine);
             //sb.Append(" $('#imgMain').attr('src',loadingUrl);"+ System.Environment.NewLine)
-            
+
             // Write each option to temp varible so we can get it's value as a string
             // This ensures the JSON will get correctly quoted by JQuery
             foreach (Option opt in model.LocalProduct.Options)
@@ -263,7 +267,7 @@ namespace MerchantTribeStore.Controllers
                     if (opt.OptionType == OptionTypes.RadioButtonList)
                     {
                         sb.Append("$('.radio" + opt.Bvin.Replace("-", "") + ":checked').val();" + System.Environment.NewLine);
-            
+
                     }
                     else if (opt.OptionType == OptionTypes.CheckBoxes)
                     {
@@ -277,7 +281,7 @@ namespace MerchantTribeStore.Controllers
                     //sb.Append("alert(opt" + opt.Bvin.Replace("-", "") + ");" + System.Environment.NewLine);                            
                 }
             }
-            
+
             sb.Append("$.post('" + Url.Content("~/products/validate") + "'," + System.Environment.NewLine);
             sb.Append(" {\"productbvin\":\"" + model.LocalProduct.Bvin + "\"" + System.Environment.NewLine);
             foreach (Option opt in model.LocalProduct.Options)
@@ -290,11 +294,11 @@ namespace MerchantTribeStore.Controllers
             sb.Append("}, " + System.Environment.NewLine);
             sb.Append("  function(data) {" + System.Environment.NewLine);
             //sb.Append(" alert(data.Message);" + System.Environment.NewLine);
-            
+
             sb.Append(" if (data.Message === null || data.Message.Length < 1) { $('#localmessage').html('');} else {");
             sb.Append("$('#localmessage').html('<label>&nbsp;</label><span class=\"choice\">' + data.Message + '</span>');");
             sb.Append("}" + System.Environment.NewLine);
-            
+
             sb.Append(" $('#imgMain').attr('src',data.ImageUrl);" + System.Environment.NewLine);
             sb.Append(" $('#sku').html(data.Sku);" + System.Environment.NewLine);
             sb.Append(" $('.stockdisplay').html(data.StockMessage);" + System.Environment.NewLine);
@@ -304,9 +308,9 @@ namespace MerchantTribeStore.Controllers
             sb.Append("  }, 'json');" + System.Environment.NewLine);
             // end post function            
             sb.Append("}" + System.Environment.NewLine);
-            
+
             // end evaluate function
-            
+
 
             // CUT: moved this to separate ProductPage.js b/c there's no reason this should be hard-coded
             //// Document Ready Function
@@ -318,21 +322,21 @@ namespace MerchantTribeStore.Controllers
             //sb.Append("});" + System.Environment.NewLine);
 
             //sb.Append(" EvaluateSelections(); " + System.Environment.NewLine);
-           
+
             //sb.Append("});" + System.Environment.NewLine + System.Environment.NewLine);
             //// End of Document Ready
 
             sb.Append("</script>" + System.Environment.NewLine);
-            model.JavaScripts += sb.ToString();            
+            model.JavaScripts += sb.ToString();
         }
         private void CheckForBackOrder(ProductPageViewModel model)
         {
             InventoryCheckData data = MTApp.CatalogServices.InventoryCheck(model.LocalProduct, string.Empty);
             model.StockMessage = data.InventoryMessage;
-            model.IsAvailableForSale = data.IsAvailableForSale;            
+            model.IsAvailableForSale = data.IsAvailableForSale;
         }
         private void LoadLineItemValues(ProductPageViewModel model)
-        {            
+        {
             if (model.LineItemId.Trim().Length > 0)
             {
                 long lineItemId = 0;
@@ -384,7 +388,7 @@ namespace MerchantTribeStore.Controllers
             model.PreRenderedPrices = sb.ToString();
         }
         private void RenderAdditionalImages(ProductPageViewModel model)
-        {            
+        {
             if (model.LocalProduct.Images.Count < 1) return;
 
             StringBuilder sb = new StringBuilder();
@@ -423,9 +427,9 @@ namespace MerchantTribeStore.Controllers
             int MaxItemsToShow = 3;
             bool IncludeAutoSuggestions = true;
 
-            List<ProductRelationship> relatedItems 
+            List<ProductRelationship> relatedItems
                 = MTApp.CatalogServices.ProductRelationships.FindForProduct(model.LocalProduct.Bvin);
-            if (relatedItems == null) return;            
+            if (relatedItems == null) return;
 
             int maxItems = MaxItemsToShow;
 
@@ -451,15 +455,15 @@ namespace MerchantTribeStore.Controllers
 
 
             if (relatedItems.Count < 1) return;
-            
+
             for (int i = 0; i < maxItems; i++)
             {
                 string relatedBvin = relatedItems[i].RelatedProductId;
                 Product related = MTApp.CatalogServices.Products.Find(relatedBvin);
                 if (related != null)
                 {
-                    SingleProductViewModel item = new SingleProductViewModel(related, MTApp);                    
-                    if (i == 0) item.IsFirstItem = true;                    
+                    SingleProductViewModel item = new SingleProductViewModel(related, MTApp);
+                    if (i == 0) item.IsFirstItem = true;
                     if (i == (maxItems - 1)) item.IsLastItem = true;
                     model.RelatedItems.Add(item);
                 }
@@ -481,7 +485,7 @@ namespace MerchantTribeStore.Controllers
             model.Selections = result;
         }
         private void DetermineQuantityToAdd(ProductPageViewModel model)
-        {            
+        {
             int quantity = 0;
             string formQuantity = Request.Form["qty"];
             if (int.TryParse(formQuantity, out quantity))
@@ -507,7 +511,7 @@ namespace MerchantTribeStore.Controllers
                 }
             }
 
-            model.Quantity = quantity;            
+            model.Quantity = quantity;
         }
         private bool ValidateSelections(ProductPageViewModel model)
         {
@@ -552,8 +556,8 @@ namespace MerchantTribeStore.Controllers
         [ChildActionOnly]
         public ActionResult RenderSingleProduct(Product product)
         {
-            if (product == null) return Content("");            
-            SingleProductViewModel model = new SingleProductViewModel(product, MTApp);            
+            if (product == null) return Content("");
+            SingleProductViewModel model = new SingleProductViewModel(product, MTApp);
             return View(model);
         }
 
@@ -662,7 +666,7 @@ namespace MerchantTribeStore.Controllers
             }
 
             return result;
-        }        
+        }
 
     }
 }

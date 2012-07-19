@@ -12,12 +12,13 @@ namespace MerchantTribe.Commerce.Utilities
 {
     public class ImageProcessing
     {
-        private const int TINYWIDTH = 50;
-        private const int TINYHEIGHT = 50;
-        private const int SMALLWIDTH = 220;
-        private const int SMALLHEIGHT = 220;
-        private const int MEDIUMWIDTH = 440;
-        private const int MEDIUMHEIGHT = 440;
+        // why the fuck is this hard-coded?
+        private const int TINYWIDTH = 85;
+        private const int TINYHEIGHT = 85;
+        private const int SMALLWIDTH = 275;
+        private const int SMALLHEIGHT = 275;
+        private const int MEDIUMWIDTH = 463;
+        private const int MEDIUMHEIGHT = 463;
         private const int LOGOWIDTH = 310;
         private const int LOGOHEIGHT = 110;
         private const int BANNERWIDTH = 700;
@@ -61,15 +62,15 @@ namespace MerchantTribe.Commerce.Utilities
         }
         public static bool ShrinkToMedium(string originalFile)
         {
-            return ShrinkImage(originalFile, "medium", MEDIUMWIDTH, MEDIUMHEIGHT);            
+            return ShrinkImage(originalFile, "medium", MEDIUMWIDTH, MEDIUMHEIGHT);
         }
         public static bool ShrinkToLogo(string originalFile)
         {
-            return ShrinkImage(originalFile, "logo", LOGOWIDTH, LOGOHEIGHT);            
+            return ShrinkImage(originalFile, "logo", LOGOWIDTH, LOGOHEIGHT);
         }
         public static bool ShrinkToBanner(string originalFile)
         {
-            return ShrinkImage(originalFile, "banner", BANNERWIDTH, BANNERHEIGHT);            
+            return ShrinkImage(originalFile, "banner", BANNERWIDTH, BANNERHEIGHT);
         }
 
         public static bool ShrinkToThemePreview(string originalFile)

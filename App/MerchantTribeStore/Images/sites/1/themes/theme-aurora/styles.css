@@ -329,8 +329,8 @@ ul.typedisplay { list-style: none; }
 #wait { position: absolute; top: 0; right: 0; font-size: 80%; padding: 0 10px; background: #c00; color: #fff; }
 
 /* Product Page Template */
-#productpage .imagecolumn {float:left;width:460px;}
-#productpage .actioncolumn {float:right;width:460px;}
+#productpage .imagecolumn {float:left;width:463px;}
+#productpage .actioncolumn {float:right;width:463px;}
 #productpage .informationcolumn {clear:both;}
 #productpage .options {margin:10px 0;}
 #productcontrols .choice {display:block;}
@@ -604,8 +604,8 @@ ul.filterselected li, ul.filterselections li
 .productimage
 {
 	margin: 0px 0;
-	height: 440px;
-	width: 440px;
+	height: 463px;
+	width: 463px;
 }
 .additionalimages a
 {
