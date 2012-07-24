@@ -720,6 +720,7 @@ h1 {color:#fff;}
 
 .checkout #btnsubmit { float: left; }
 #trust-seals { float: right; }
+#checkout-special-instructions { display: none; }
 
 /* Column Blocks */
 .decoratedblock {}

@@ -151,12 +151,12 @@
                 @Html.Partial("DisplayPaymentMethods", Model)
             </div>
 
-            @*<div class="section-extras">
+            <div class="section-extras" id="checkout-special-instructions">
                 <h2>
                     Special Instructions</h2>
                 <textarea id="specialinstructions" name="specialinstructions" cols="80" rows="4"
                     tabindex="600">@Model.CurrentOrder.Instructions</textarea>
-            </div>*@
+            </div>
 
             <div class="section-actions">
                 @if (Model.ShowAgreeToTerms)

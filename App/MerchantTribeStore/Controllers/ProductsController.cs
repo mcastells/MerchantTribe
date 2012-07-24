@@ -140,10 +140,12 @@ namespace MerchantTribeStore.Controllers
 
             CheckForBackOrder(model);
 
-            model.MainImageUrl = MerchantTribe.Commerce.Storage.DiskStorage.ProductAdditionalImageUrlMedium(MTApp, model.LocalProduct.Bvin, 
-                model.LocalProduct.Images.First() == null ? string.Empty : model.LocalProduct.Images.First().Bvin,
-                model.LocalProduct.Images.First().FileName,
-                Request.IsSecureConnection);
+            model.MainImageUrl = MerchantTribe.Commerce.Storage.DiskStorage.ProductImageUrlMedium(MTApp, model.LocalProduct.Bvin, model.LocalProduct.ImageFileSmall, Request.IsSecureConnection);
+            // use first add'l image as main image
+            //model.MainImageUrl = MerchantTribe.Commerce.Storage.DiskStorage.ProductAdditionalImageUrlMedium(MTApp, model.LocalProduct.Bvin, 
+            //    model.LocalProduct.Images.First() == null ? string.Empty : model.LocalProduct.Images.First().Bvin,
+            //    model.LocalProduct.Images.First().FileName,
+            //    Request.IsSecureConnection);
 
             model.MainImageAltText = model.LocalProduct.ImageFileSmallAlternateText;
             model.PreRenderedTypeValues = model.LocalProduct.GetTypeProperties(this.MTApp);
