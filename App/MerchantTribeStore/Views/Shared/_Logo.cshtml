@@ -1,6 +1,6 @@
 ﻿@model MerchantTribeStore.code.TemplateEngine.TagHandlers.Logo.LogoViewModel
 <a href="@Html.Raw(Model.LinkUrl)" title="@Model.StoreName" class="logo">
-@*@if (Model.InnerContent.Trim().Length > 0)
+@if (Model.InnerContent.Trim().Length > 0)
 {
     @Html.Raw(Model.InnerContent)
 }
@@ -11,7 +11,7 @@ else if (Model.UseTextOnly == false && Model.LogoImageUrl.Length > 0)
 else
 {
     @Model.LogoText
-}*@
-<img src="https://s3.amazonaws.com/illtee-web/logos/logo.png" alt="@Model.StoreName" />
+}
+@*<img src="https://s3.amazonaws.com/illtee-web/logos/logo.png" alt="@Model.StoreName" />*@
 </a>
 
