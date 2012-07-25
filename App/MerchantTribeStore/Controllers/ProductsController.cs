@@ -187,17 +187,18 @@ namespace MerchantTribeStore.Controllers
             }
             ViewData["PassedAnalyticsTop"] = sb.ToString();
 
-            StringBuilder sbb = new StringBuilder();
-            sbb.Append("<div id=\"fb-root\"></div>");
-            sbb.Append("<script>    (function (d, s, id) {");
-            sbb.Append("var js, fjs = d.getElementsByTagName(s)[0];");
-            sbb.Append("if (d.getElementById(id)) { return; }");
-            sbb.Append("js = d.createElement(s); js.id = id;");
-            sbb.Append("js.src = \"//connect.facebook.net/en_US/all.js#xfbml=1\";");
-            sbb.Append("fjs.parentNode.insertBefore(js, fjs);");
-            sbb.Append("} (document, 'script', 'facebook-jssdk'));</script>");
+            // moving this to overall template b/c we use like button on every page
+            //StringBuilder sbb = new StringBuilder();
+            //sbb.Append("<div id=\"fb-root\"></div>");
+            //sbb.Append("<script>    (function (d, s, id) {");
+            //sbb.Append("var js, fjs = d.getElementsByTagName(s)[0];");
+            //sbb.Append("if (d.getElementById(id)) { return; }");
+            //sbb.Append("js = d.createElement(s); js.id = id;");
+            //sbb.Append("js.src = \"//connect.facebook.net/en_US/all.js#xfbml=1\";");
+            //sbb.Append("fjs.parentNode.insertBefore(js, fjs);");
+            //sbb.Append("} (document, 'script', 'facebook-jssdk'));</script>");
 
-            ViewData["PassedAnalyticsBottom"] += sbb.ToString();
+            //ViewData["PassedAnalyticsBottom"] += sbb.ToString();
             return model;
         }
         private Product ParseProductFromSlug(string slug)

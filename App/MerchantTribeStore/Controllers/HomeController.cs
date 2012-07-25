@@ -56,6 +56,9 @@ namespace MerchantTribeStore.Controllers
                 {
                     SessionManager.CategoryLastId = string.Empty;
                     ViewBag.Title = MTApp.CurrentStore.Settings.HomepageTitle();
+                    ViewBag.MetaKeywords = MTApp.CurrentStore.Settings.GetProp("HomepageMetaKeywords");
+                    ViewBag.MetaDescription = MTApp.CurrentStore.Settings.GetProp("HomepageMetaDescription");
+                    ViewData["AdditionalMetaTags"] = MTApp.CurrentStore.Settings.GetProp("HomepageMetaExtras");
                     ViewBag.BodyClass = "store-home-page";
                 }
                 using (profiler.Step("Load Template"))

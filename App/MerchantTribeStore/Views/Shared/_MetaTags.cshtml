@@ -1,8 +1,12 @@
 ﻿@{
     Layout = null;
 }
-<meta name="keywords" content="@ViewBag.MetaKeywords" />
-<meta name="description" content="@ViewBag.MetaDescription" />
+@if (!string.IsNullOrWhiteSpace(ViewBag.MetaKeywords)) {
+    <meta name="keywords" content="@ViewBag.MetaKeywords" />
+}
+@if (!string.IsNullOrWhiteSpace(ViewBag.MetaDescription)) {
+    <meta name="description" content="@ViewBag.MetaDescription" />
+}
 @if (!String.IsNullOrEmpty((string)ViewData["AdditionalMetaTags"]))
 {
     @Html.Raw((string)ViewData["AdditionalMetaTags"]);
