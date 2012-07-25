@@ -66,11 +66,13 @@
                 <div id="productdescription" name="productdescription" itemprop="description">
                     @Html.Raw(Model.LocalProduct.LongDescription)
                 </div>
+
+                <div class="shade box">
                 @if (ViewBag.UseFaceBook == true)
                 {
+                    <p class="hand">Help spread the word!  Click like below.</p>
                     
-                    @Html.Partial("~/views/shared/_FaceBookLike.cshtml",
-                        new MerchantTribeStore.Models.FaceBookLikeModel() { PageUrl = ViewBag.CurrentUrl })                
+                    <div class="fb-like" data-href="http://illtee.com" data-send="true" data-width="450" data-show-faces="true" data-colorscheme="dark" data-font="arial"></div>            
                 }
                 @if (ViewBag.UseTwitter == true)
                 {
@@ -94,6 +96,8 @@
                         });
 
                 }
+                </div>
+
                 <input type="hidden" id="productbvin" name="productbvin" value="@Model.LocalProduct.Bvin" />
                 <input type="hidden" id="lineitemid" name="lineitemid" value="@Model.LineItemId" />
                 <!--VOLUME DISCOUNTS HERE-->
