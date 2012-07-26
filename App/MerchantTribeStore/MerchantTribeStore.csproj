@@ -763,6 +763,7 @@
     <Content Include="BVModules\Shipping\UPS\edit.ascx" />
     <Content Include="BVModules\Shipping\US Postal Service - Domestic\edit.ascx" />
     <Content Include="BVModules\Shipping\US Postal Service - International\edit.ascx" />
+    <Content Include="channel.html" />
     <Content Include="content\systemtemplates\default-no-menu.html" />
     <Content Include="content\systemtemplates\default.html" />
     <Content Include="content\systemtemplates\home.html" />

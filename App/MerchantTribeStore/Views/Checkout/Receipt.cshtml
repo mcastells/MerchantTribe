@@ -1,10 +1,22 @@
-﻿<h1>
+﻿<script type="text/javascript">
+    $(function () {
+        $(document).bind('fbload', function () {
+            FB.Event.subscribe('edge.create', function (res) {
+                // show the msg saying that they'll get laser viewers
+                $('#like-msg').slideDown('fast');
+            });
+        });
+    });
+</script>
+
+<h1>
     Thank You!</h1>
 <h3>
     You'll have your bad-ass new glow shirt in a few days.</h3>
 <div class="shade box">
     <h2 class="hand">
         To get your FREE lazer viewers, click like below and help spread the word!</h2>
+    <div id="like-msg" class="hand" style="display: none;margin-bottom: 1em;">Thanks!  We'll throw in a pair of lazer viewers with your order.</div>
     <div class="fb-like" data-href="http://illtee.com" data-send="true" data-width="450"
         data-show-faces="true" data-colorscheme="dark" data-font="arial">
     </div>

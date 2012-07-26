@@ -4,4 +4,5 @@
 
     // select text in qty field on focus
     $('input[name="qty"]').focus(function () { $(this).select(); });
+
 });
