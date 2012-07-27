@@ -21,7 +21,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 /* Body Styles */
 body { background: #0f0d16; font-family: Arial, Verdana, Sans-Serif; color: #fff; font-size: 16px; line-height:1.5em;}
 
-.clear {clear:both;}
+.clear {clear:both; line-height: 0px;}
 .padded {padding:10px;}
 .sidepadded {padding:0 10px;}
 .centered, table.centerall td {text-align:center;}
@@ -105,6 +105,7 @@ input.forminput.medium { width: 190px; }
 	text-decoration:none;
 	text-shadow:-1px -1px 1px #c2d1d3;
 	border: none;
+	cursor: pointer;
 }.button:active {
 	position:relative;
 	top:1px;
@@ -151,6 +152,10 @@ a, a:visited, a:hover {text-decoration: none; }
 	padding: 1em;
 	margin-bottom: 1em;
 }
+#checkout-info .shade.box
+{
+	width: 400px;
+}
 
 table.line-divide td {border-bottom:solid 1px #3a3950; padding: 10px; vertical-align:top;}
 
@@ -184,14 +189,41 @@ table.line-divide td {border-bottom:solid 1px #3a3950; padding: 10px; vertical-a
 #search-form .searchgo {margin:3px 0 0 0;}
 
 /* Main Content Wrapper */
-#main-content {width:940px;margin:0 auto;}
+#main-content {width:900px;margin:0 auto;}
 #main-with-left-nav {width:752px;float:right;margin:0;}
 
 /* Footer */
+#mce-EMAIL
+{
+	width: 170px;
+	margin-right: 10px;
+	float: left;
+}
+#mc-embedded-subscribe
+{
+	padding: 7px 14px;
+	float: left;
+}
+#copyright
+{
+	text-align: center;
+	margin-top: 30px;
+}
 #footer 
 {
 	margin: 0;
 	clear: both;
+}
+#footer-left
+{
+	width: 515px;
+	margin-right: 53px;
+	float: left;
+}
+#footer-right
+{
+	width: 300px;
+	float: right;
 }
 	
 /* Holds all left navigation items */
@@ -331,8 +363,8 @@ ul.typedisplay { list-style: none; }
 #wait { position: absolute; top: 0; right: 0; font-size: 80%; padding: 0 10px; background: #c00; color: #fff; }
 
 /* Product Page Template */
-#productpage .imagecolumn {float:left;width:463px;}
-#productpage .actioncolumn {float:right;width:463px;}
+#productpage .imagecolumn {float:left;width:450px;}
+#productpage .actioncolumn {float:right;width:450px;}
 #productpage .informationcolumn {clear:both;}
 #productpage .options {margin:10px 0;}
 #productcontrols .choice {display:block;}
@@ -707,7 +739,7 @@ h1 {color:#fff;}
 .checkout .first-name { clear: both; }
 .checkout .last-name { margin-left: 20px; }
 
-#checkout-info { width: 600px; float: left; margin: 0 2em 2em 0; }
+#checkout-info { width: 600px; float: left; }
 
 #checkout-summary { width: 300px; float: left; }
 #checkout-summary table { width: 100%; }
@@ -742,6 +774,7 @@ ul.tabnavigation li a
 }
 .tabs
 {
+	padding-top: 20px;
 	background: url(https://s3.amazonaws.com/illtee-web/layout/divider-full.png) no-repeat;
 }
 

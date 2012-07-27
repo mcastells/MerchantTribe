@@ -7,17 +7,14 @@
     });
 </script>
 @Html.Action("Index", "ContentColumn", new { id = "Promo Banner" })
-<div id="productpage">
-    @*@Html.Action("ProductTrail", "BreadCrumb", new { product = Model.LocalProduct })*@
+<div id="productpage">@*@Html.Action("ProductTrail", "BreadCrumb", new { product = Model.LocalProduct })*@
     @Html.Action("Index", "ContentColumn", new { id = Model.LocalProduct.PreContentColumnId })
     <div class="productpagemain">
-        <div class="imagecolumn">
-            @*@if (Model.LocalProduct.Images.Count > 0)
+        <div class="imagecolumn">@*@if (Model.LocalProduct.Images.Count > 0)
             {
                 var img = Model.LocalProduct.Images.First();
                 <img itemprop="image" id="imgMain" src="@Model.LocalProduct" alt="@img.AlternateText" />
             }*@
-
             <div class="productimage">
                 <img itemprop="image" id="imgMain" src="@Model.MainImageUrl" alt="@Model.MainImageAltText" />
                 <input type="hidden" id="imgMainLast" value="" />
@@ -28,11 +25,11 @@
             <h1 itemprop="name">
                 @Model.LocalProduct.ProductName</h1>
             <div id="pricewrapper">@Html.Raw(Model.PreRenderedPrices)</div>
-            <div class="clear">
-            </div>
+            <div class="clear"></div>
             @Html.Raw((string)TempData["messages"])
             @*<span id="sku" itemprop="productID">@Model.LocalProduct.Sku</span>*@
             <div id="productcontrols">
+
                 <form action="@Url.Content("~/" + Model.LocalProduct.UrlSlug)" method="post">
                 @Html.Raw(Model.PreRenderedOptions)
                 <span class="stockdisplay">@Html.Raw(Model.StockMessage)</span>
@@ -61,22 +58,21 @@
                     }
                     <div class="clear"></div>
                 </div>
-                
                 @Html.Raw(Model.PreRenderedTypeValues)
                 <div id="productdescription" name="productdescription" itemprop="description">
                     @Html.Raw(Model.LocalProduct.LongDescription)
                 </div>
-
                 <div class="shade box">
-                @if (ViewBag.UseFaceBook == true)
-                {
-                    <p class="hand">Help spread the word!  Click like below.</p>
+                    @if (ViewBag.UseFaceBook == true)
+                    {
+                        <p class="hand">Help spread the word! Click like below.</p>
                     
-                    <div class="fb-like" data-send="true" data-width="450" data-show-faces="true" data-colorscheme="dark" data-font="arial"></div>            
-                }
-                @if (ViewBag.UseTwitter == true)
-                {
-                    @Html.Partial("~/views/shared/_Twitter.cshtml",
+                        <div class="fb-like" data-send="true" data-width="450" data-show-faces="true" data-colorscheme="dark"
+                            data-font="arial"></div>            
+                    }
+                    @if (ViewBag.UseTwitter == true)
+                    {
+                        @Html.Partial("~/views/shared/_Twitter.cshtml",
                         new MerchantTribeStore.Models.TwitterViewModel()
                         {
                             DisplayUrl = ViewBag.CurrentUrl,
@@ -84,10 +80,10 @@
                             ViaTwitterName = ViewBag.TwitterHandle,
                             DefaultText = String.Format(ViewBag.TwitterDefaultTweetText, Model.LocalProduct.ProductName + " " + Model.LocalProduct.Sku)
                         })
-                }
-                @if (ViewBag.UseGooglePlus == true)
-                {
-                    @Html.Partial("~/views/shared/_GooglePlusOne.cshtml",
+                    }
+                    @if (ViewBag.UseGooglePlus == true)
+                    {
+                        @Html.Partial("~/views/shared/_GooglePlusOne.cshtml",
                         new MerchantTribeStore.Models.GooglePlusOneViewModel()
                         {
                             PageUrl = ViewBag.CurrentUrl,
@@ -95,19 +91,17 @@
                             Size = MerchantTribeStore.Models.GooglePlusOneSize.Standard
                         });
 
-                }
+                    }
                 </div>
-
                 <input type="hidden" id="productbvin" name="productbvin" value="@Model.LocalProduct.Bvin" />
                 <input type="hidden" id="lineitemid" name="lineitemid" value="@Model.LineItemId" />
                 <!--VOLUME DISCOUNTS HERE-->
-                <div class="clear">
-                </div>
+                <div class="clear"></div>
                 </form>
+
             </div>
         </div>
-        <div class="clear">
-            &nbsp;</div>
+        <div class="clear">&nbsp;</div>
     </div>
     <div class="informationcolumn">
         <ul class="tabnavigation">
@@ -133,9 +127,8 @@
                                 @Html.Action("TopReviews", "ProductReviews", new { howMany = 3, reviews = Model.LocalProduct.ReviewsApproved })
                                 @if (Model.LocalProduct.Reviews.Count > 0)
                                 {
-                                    <div class="ProductReviewLinks">
-                                        <a href="@Url.Content("~/Products/Reviews/" + Model.LocalProduct.UrlSlug)">View All
-                                            Reviews</a><br />
+                                    <div class="ProductReviewLinks"><a href="@Url.Content("~/Products/Reviews/" + Model.LocalProduct.UrlSlug)">
+                                        View All Reviews</a><br />
                                     </div>
                                 }
                             </div>
@@ -144,8 +137,7 @@
                                 {                            
                                     <h3>
                                         Write a Review for this Product</h3>
-                                    <div id="submitreviewmessage">
-                                    </div>
+                                    <div id="submitreviewmessage"></div>
                                     <form action="@Url.Content("~/productreviews/create")" method="post" id="submitreviewform">
                                     <table class="formtable">
                                         <tr>
@@ -183,23 +175,19 @@
                                     </form>
                                 }
                             </div>
-                            <div class="clear">
-                            </div>
+                            <div class="clear"></div>
                         </div>
                     </div>
                 </div>
             }
             <div id="tabsuggesteditems">
-                <div class="padded">
-                    <h2>@ViewBag.RelatedItemsTitle</h2>
-                    <div class="relateditems">
-                        @foreach (var item in Model.RelatedItems)
-                        {
-                            @Html.Partial("RenderSingleProduct", item);
-                        }
-                        <div class="clear">
-                        </div>
-                    </div>
+                <h2>@ViewBag.RelatedItemsTitle</h2>
+                <div class="relateditems">
+                    @foreach (var item in Model.RelatedItems)
+                    {
+                        @Html.Partial("RenderSingleProduct", item);
+                    }
+                    <div class="clear"></div>
                 </div>
             </div>
             @foreach (MerchantTribe.Commerce.Catalog.ProductDescriptionTab t in Model.LocalProduct.Tabs.OrderBy(y => y.SortOrder))
@@ -216,10 +204,8 @@
     @Html.Action("Index", "ContentColumn", new { id = Model.LocalProduct.PostContentColumnId })
 </div>
 <div class="modal2">
-    <div class="popoverframe2">
-        <a id="dialogclose" href="#">Close</a><br />
+    <div class="popoverframe2"><a id="dialogclose" href="#">Close</a><br />
         <iframe id="popoverpage2"></iframe>
         <br />
-        <a id="dialogclose2" href="#">Close</a>
-    </div>
+        <a id="dialogclose2" href="#">Close</a> </div>
 </div>
