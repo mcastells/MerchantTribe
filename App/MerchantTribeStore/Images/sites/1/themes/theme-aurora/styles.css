@@ -323,7 +323,7 @@ table.line-divide td {border-bottom:solid 1px #3a3950; padding: 10px; vertical-a
 
 /* ------ Product Pages ------ */
 
-#productpage h1 { float: left; max-width: 360px; margin-bottom: 20px; }
+#productpage h1 { float: left; max-width: 333px; margin-bottom: 20px; }
 
 /* price sticker yellow */
 #pricewrapper { float: left; margin-left: 20px;}
@@ -363,8 +363,8 @@ ul.typedisplay { list-style: none; }
 #wait { position: absolute; top: 0; right: 0; font-size: 80%; padding: 0 10px; background: #c00; color: #fff; }
 
 /* Product Page Template */
-#productpage .imagecolumn {float:left;width:450px;}
-#productpage .actioncolumn {float:right;width:450px;}
+#productpage .imagecolumn {float:left;width:463px;}
+#productpage .actioncolumn {float:right;width:413px;padding-left: 20px;}
 #productpage .informationcolumn {clear:both;}
 #productpage .options {margin:10px 0;}
 #productcontrols .choice {display:block;}
