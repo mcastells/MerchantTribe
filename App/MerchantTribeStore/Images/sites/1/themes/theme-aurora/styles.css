@@ -211,7 +211,7 @@ table.line-divide td {border-bottom:solid 1px #3a3950; padding: 10px; vertical-a
 }
 #footer 
 {
-	margin: 0;
+	margin: 30px 0px 0px 0px;
 	clear: both;
 }
 #footer-left
