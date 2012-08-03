@@ -793,20 +793,24 @@ ul.tabnavigation li a
 {
 	position: relative;
 	background: transparent url('//cdn.illtee.com/images/featureRotatorBG1.jpg') no-repeat;
-	height: 210px;
-	width: 455px;
+	height: 305px;
+	width: 900px;
 	margin-bottom: 70px;
-	padding: 60px 30px 35px 415px;
 }
 
-#featureRotator #videoContainer
+.feature-video
 {
-	position: absolute;
+    float: left;
+    margin: 12px 30px 10px 10px;
+	/*position: absolute;
 	top: 42px;
-	left: -31px;
 	width: 406px;
 	height: 231px;
-	background: transparent url('cdn.illtee.com/images/videoBG.png') no-repeat;
+	background: transparent url('http://cdn.illtee.com/images/videoBG.png') no-repeat;*/
+}
+.feature-content
+{    
+	padding: 40px 30px 35px 415px;
 }
 
 /* Product Thumbnails */
