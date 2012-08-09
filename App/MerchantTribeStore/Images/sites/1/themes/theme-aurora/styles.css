@@ -798,20 +798,37 @@ ul.tabnavigation li a
 	margin-bottom: 70px;
 }
 
-.feature-video
+#featureRotator .action 
 {
-    float: left;
-    margin: 12px 30px 10px 10px;
-	/*position: absolute;
+	font-family: "din-condensed-web", sans-serif; font-weight: normal; color: #e3e3e3; font-size: 26px; text-transform: uppercase;
+}
+	
+#feature-slide-video .feature-video
+{
+	position: absolute;
 	top: 42px;
+	left: -30px;
 	width: 406px;
 	height: 231px;
-	background: transparent url('http://cdn.illtee.com/images/videoBG.png') no-repeat;*/
+	background: transparent url('http://cdn.illtee.com/images/videoBG.png') no-repeat;
 }
-.feature-content
+#feature-slide-video .feature-content
 {    
 	padding: 40px 30px 35px 415px;
 }
+#feature-slide-video #feature-pinchlight
+{
+	position: absolute;
+	top: 160px;
+	left: 780px;
+}
+#feature-slide-video h1
+{
+	color: #faffa4;
+	font-size: 40px;
+		
+}
+
 
 /* Product Thumbnails */
 .record
