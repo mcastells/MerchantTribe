@@ -826,7 +826,12 @@ ul.tabnavigation li a
 {
 	color: #faffa4;
 	font-size: 40px;
-		
+}
+#feature-slide-video h2
+{
+	font-size: 25px;
+	font-weight: 300;
+	width: 400px;
 }
 
 
