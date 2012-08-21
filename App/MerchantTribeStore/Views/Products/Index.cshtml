@@ -30,6 +30,10 @@
             @*<span id="sku" itemprop="productID">@Model.LocalProduct.Sku</span>*@
             <div id="productcontrols">
 
+                <div id="productdescription" name="productdescription" itemprop="description">
+                    @Html.Raw(Model.LocalProduct.LongDescription)
+                </div>
+
                 <form action="@Url.Content("~/" + Model.LocalProduct.UrlSlug)" method="post">
                 @Html.Raw(Model.PreRenderedOptions)
                 <span class="stockdisplay">@Html.Raw(Model.StockMessage)</span>
@@ -59,9 +63,6 @@
                     <div class="clear"></div>
                 </div>
                 @Html.Raw(Model.PreRenderedTypeValues)
-                <div id="productdescription" name="productdescription" itemprop="description">
-                    @Html.Raw(Model.LocalProduct.LongDescription)
-                </div>
                 <div class="shade box">
                     @if (ViewBag.UseFaceBook == true)
                     {

@@ -323,7 +323,7 @@ table.line-divide td {border-bottom:solid 1px #3a3950; padding: 10px; vertical-a
 
 /* ------ Product Pages ------ */
 
-#productpage h1 { float: left; max-width: 333px; margin-bottom: 20px; }
+#productpage h1 { float: left; max-width: 333px; margin-bottom: 20px; width: 310px; }
 
 /* price sticker yellow */
 #pricewrapper { float: left; margin-left: 20px;}
@@ -343,8 +343,8 @@ table.line-divide td {border-bottom:solid 1px #3a3950; padding: 10px; vertical-a
 	background: url(https://s3.amazonaws.com/illtee-web/layout/price-circle-bg.png) no-repeat; 
 	font-size: 15px;
 	width: 72px; 
-	height: 47px; 
-	padding: 24px 0 0 8px;
+	height: 59px; 
+	padding: 12px 0 0 8px;
 }
 
 /* gray sticker */
@@ -810,6 +810,7 @@ ul.tabnavigation li a
 	left: -30px;
 	width: 406px;
 	height: 231px;
+	padding: 1px;
 	background: transparent url('http://cdn.illtee.com/images/videoBG.png') no-repeat;
 }
 #feature-slide-video .feature-content
