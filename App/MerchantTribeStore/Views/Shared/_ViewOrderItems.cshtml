@@ -9,7 +9,7 @@
 
                 @if (item.LineTotal != item.LineTotalWithoutDiscounts)
                 {
-                    <div class="discounts">@item.DiscountDetails</div>
+                    <div class="discounts">@item.DiscountDetails.First().Description.ToString()</div>
                 }
             </td>
             <td align="right">
