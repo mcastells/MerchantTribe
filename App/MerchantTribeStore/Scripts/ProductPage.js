@@ -73,7 +73,7 @@ $(document).ready(function () {
 
     // Popup Open
     $('.popover').click(function () {
-        OpenDialog($(this));
+//        OpenDialog($(this)); // cut b/c original images are huge and don't look right.. not needed anyway.
         return false;
     });
 

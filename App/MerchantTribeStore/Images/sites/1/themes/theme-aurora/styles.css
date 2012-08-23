@@ -164,7 +164,7 @@ table.line-divide td {border-bottom:solid 1px #3a3950; padding: 10px; vertical-a
 #site-wrapper {width:900px; margin:0 auto;padding:0;}
 
 /* Header */
-#header {height:144px;width:900px; }
+#header {height:120px;width:900px; }
 #header #logo-area {margin-top: 59px;position: absolute;}
 #header #logo-area a img {margin:0;}
 #header ul {list-style:none;}                           
@@ -647,7 +647,7 @@ ul.filterselected li, ul.filterselections li
 	float: left;
 	width: 85px;
 	height: 85px;
-	margin: 0 3px 3px 0;
+	margin: 20px 20px 0 0;
 }
 .modal2
 {
