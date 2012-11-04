@@ -753,16 +753,16 @@ namespace MerchantTribeStore.Controllers
                     o, MTApp.CurrentStore.Settings.Analytics.YahooAccountId);
             }
 
-            if (!(bool)ViewBag.HideAnalytics)
-            {
-                System.Text.StringBuilder sbA = new System.Text.StringBuilder();
-                sbA.Append("<script type=\"text/javascript\">");
-                sbA.Append("MerchantTribeAnalytics.EventCode = '2';");
-                    sbA.Append("MerchantTribeAnalytics.EventAmount = '@Grand';");
-                    sbA.Append("MerchantTribeAnalytics.EventDescription = '@o.OrderNumber';");
-                sbA.Append("</script>");
-                this.ViewData["PassedAnalyticsBottom"] += sbA.ToString();
-            }
+            //if (!(bool)ViewBag.HideAnalytics)
+            //{
+            //    System.Text.StringBuilder sbA = new System.Text.StringBuilder();
+            //    sbA.Append("<script type=\"text/javascript\">");
+            //    sbA.Append("MerchantTribeAnalytics.EventCode = '2';");
+            //        sbA.Append("MerchantTribeAnalytics.EventAmount = '@Grand';");
+            //        sbA.Append("MerchantTribeAnalytics.EventDescription = '@o.OrderNumber';");
+            //    sbA.Append("</script>");
+            //    this.ViewData["PassedAnalyticsBottom"] += sbA.ToString();
+            //}
         }
 
         [HttpPost] // POST: /checkout/applyshipping
